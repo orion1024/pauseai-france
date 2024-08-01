@@ -1,2 +1,2 @@
 [functions]
-  included_files = ["logs/typography-diff.html"]
+  included_files = ["build/logs/typography-diff.html"]
