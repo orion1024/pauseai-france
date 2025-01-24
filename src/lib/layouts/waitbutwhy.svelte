@@ -9,14 +9,14 @@
 </div>
 
 <style>
-	.wbw-container {
+	:global(.wbw-container) {
 		background-color: white;
 		min-height: 100vh;
 		padding: 2rem;
 	}
 
-	.wbw-content {
-		max-width: 1000px;
+	:global(.wbw-content) {
+		max-width: 100%;
 		margin: 0 auto;
 		font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
 		font-size: 100%;
@@ -30,5 +30,10 @@
 
 	:global(.wbw-content a:hover) {
 		text-decoration: underline;
+	}
+
+	:global(.wbw-centered) {
+		text-align: center;
+		margin: 2rem auto;
 	}
 </style>
