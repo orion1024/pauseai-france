@@ -16,7 +16,8 @@ dotenv()
 const mdsvexOptions = {
 	extensions: ['.md'],
 	layout: {
-		_: './src/mdsvex.svelte'
+		_: './src/lib/layouts/mdsvex.svelte',
+		waitbutwhy: './src/lib/layouts/waitbutwhy.svelte'
 	},
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
