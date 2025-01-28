@@ -8,6 +8,9 @@ import remarkToc from 'remark-toc'
 import rehypeSlug from 'rehype-slug'
 import { faqPlugin } from './src/lib/faqPlugin.js'
 import { remarkFrenchTypography } from './src/lib/typographyPlugin.js'
+import remarkDirective from 'remark-directive';
+// import {rehypeCustomClass} from './src/lib/rehypeCustomclass.js'
+import {remarkCustomContainer} from './src/lib/remarkCustomContainer.js'
 
 import { config as dotenv } from 'dotenv'
 dotenv()
@@ -26,10 +29,18 @@ const mdsvexOptions = {
 			return `{@html \`${html}\` }`
 		}
 	},
-	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true }], remarkFrenchTypography],
-	rehypePlugins: [rehypeSlug, faqPlugin]
+	remarkPlugins: [
+		[remarkDirective, { containerDirectives: ["customclass"] }],
+		remarkCustomContainer,
+		remarkUnwrapImages,
+		[remarkToc, { tight: true }],
+		remarkFrenchTypography		
+	],
+	rehypePlugins: [
+		rehypeSlug,
+		faqPlugin
+	]
 }
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
