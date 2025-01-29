@@ -24,7 +24,7 @@ export function remarkCustomContainer() {
   return (tree) => {
     console.log('remarkCustomContainer transformer running')
     visit(tree, (node) => {
-      if ((node.value || '').includes(':::')) {
+      if ((node.value || '').includes('PICK ME !')) {
         console.log('Found directive node:', {
           type: node.type,
           value: node.value,

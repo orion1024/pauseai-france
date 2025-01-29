@@ -4,11 +4,13 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdsvex, escapeSvelte } from 'mdsvex'
 import { getHighlighter } from 'shiki'
 import remarkUnwrapImages from 'remark-unwrap-images'
+import remarkParse from 'remark-parse'
 import remarkToc from 'remark-toc'
 import rehypeSlug from 'rehype-slug'
 import { faqPlugin } from './src/lib/faqPlugin.js'
 import { remarkFrenchTypography } from './src/lib/typographyPlugin.js'
 import remarkDirective from 'remark-directive';
+
 // import {rehypeCustomClass} from './src/lib/rehypeCustomclass.js'
 import {remarkCustomContainer} from './src/lib/remarkCustomContainer.js'
 
@@ -30,21 +32,25 @@ const mdsvexOptions = {
 		}
 	},
 	remarkPlugins: [
-		[remarkDirective, { containerDirectives: ["customclass"] }],
-		remarkCustomContainer,
-		remarkUnwrapImages,
-		[remarkToc, { tight: true }],
-		remarkFrenchTypography		
+		remarkParse,
+		remarkDirective,
+		remarkCustomContainer
+		// remarkUnwrapImages,
+		// [remarkToc, { tight: true }],
+		// remarkFrenchTypography		
 	],
-	rehypePlugins: [
-		rehypeSlug,
-		faqPlugin
-	]
+	// rehypePlugins: [
+	// 	rehypeSlug,
+	// 	faqPlugin
+	// ]
 }
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
-	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
+	preprocess: [
+		mdsvex(mdsvexOptions),
+		vitePreprocess()
+	],
 	kit: {
 		adapter: adapter({
 			edge: true

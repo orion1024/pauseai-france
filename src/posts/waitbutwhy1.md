@@ -7,9 +7,23 @@ layout: waitbutwhy
 
 TODO : need remark-directive ?
 
-::: customclass class1
-    mon container
+:::main
+Lorem:br
+ipsum.
+PICK ME !
+
+::hr
+
+A :i[lovely] language know as :abbr.
+
 :::
+
+:::customclass class1
+    mon container
+    PICK ME !
+:::
+
+::leafcontainer
 
 **Note** : _Si ce billet m'a pris trois semaines à finir, c'est qu'en fouillant dans mes recherches sur l'Intelligence Artificielle, je n'arrivais pas à **croire** ce que je lisais. J'ai rapidement compris que ce qui se passait dans le monde de l'IA n'était pas seulement une question importante, mais de loin LA question la plus importante pour notre avenir. Je voulais donc en apprendre le plus possible à ce sujet, et ceci fait, je voulais m'assurer d'écrire un article qui explique vraiment tout ce que cela recouvre et pourquoi c'est si crucial. Comme on pouvait s'y attendre, ça a pris des proportions énormes, alors j'ai divisé mon post en deux parties. Ceci est la Partie 1 — La Partie 2 est [ici](/waitbutwhy2)._
 
