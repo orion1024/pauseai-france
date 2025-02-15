@@ -11,27 +11,25 @@ export function remarkCustomContainer() {
 			if (node.type === 'text') {
 				let value = node.value
 
-				// Existing blue logging code
-				let blueIndicators = [...value.matchAll(BLUE_POPUP_INDICATOR)].map((match) => ({
+				let blueContents = [...value.matchAll(BLUE_POPUP_CONTENT)].map((match) => ({
 					number: match[1],
+					content: match[2],
 					fullMatch: match[0],
-					html: `<span class="blue-popup" data-number="${match[1]}">
-    <span class="popup-trigger">${match[0]}</span>
-    <span class="popup-content"></span>
-  </span>`
+					script: `<script>window.popupContent.blue.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
 				}))
-				if (blueIndicators.length > 0) {
+				if (blueContents.length > 0) {
 					console.log(
-						'Blue Indicators numbers:',
-						blueIndicators.map((m) => m.number)
+						'Blue Contents:',
+						blueContents.map((m) => ({ number: m.number, content: m.content }))
 					)
 				}
+
 				let blueIndicators = [...value.matchAll(BLUE_POPUP_INDICATOR)].map((match) => ({
 					number: match[1],
 					fullMatch: match[0],
 					html: `<span class="blue-popup" data-number="${match[1]}">
     <span class="popup-trigger">${match[0]}</span>
-    <span class="popup-content"></span>
+    <span class="popup-content">TESTONS</span>
   </span>`
 				}))
 				if (blueIndicators.length > 0) {
@@ -49,6 +47,7 @@ export function remarkCustomContainer() {
     <span class="popup-content"></span>
   </span>`
 				}))
+
 				if (grayIndicators.length > 0) {
 					console.log(
 						'Gray Indicators:',

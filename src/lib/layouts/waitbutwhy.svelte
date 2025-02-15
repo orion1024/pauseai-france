@@ -55,4 +55,29 @@
 		text-align: center;
 		margin: 2rem auto;
 	}
+
+	:global(.popup-trigger) {
+		cursor: pointer;
+		color: #0066cc;
+	}
+
+	:global(.popup-content) {
+		display: none;
+		position: absolute;
+		background: white;
+		border: 1px solid #ccc;
+		padding: 10px;
+		max-width: 300px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	}
+
+	:global(.blue-popup:hover .popup-content),
+	:global(.gray-popup:hover .popup-content) {
+		display: block;
+	}
+
+	:global(.blue-popup),
+	:global(.gray-popup) {
+		position: relative;
+	}
 </style>
