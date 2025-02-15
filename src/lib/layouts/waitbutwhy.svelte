@@ -1,6 +1,25 @@
-<!-- <script>
-  export let data;
-</script> -->
+<svelte:head>
+	<script>
+		window.popupContent = {
+			blue: new Map(),
+			gray: new Map()
+		}
+
+		window.addEventListener('DOMContentLoaded', () => {
+			document.querySelectorAll('.blue-popup').forEach((popup) => {
+				const number = popup.dataset.number
+				const content = window.popupContent.blue.get(number)
+				popup.querySelector('.popup-content').textContent = content
+			})
+
+			document.querySelectorAll('.gray-popup').forEach((popup) => {
+				const number = popup.dataset.number
+				const content = window.popupContent.gray.get(number)
+				popup.querySelector('.popup-content').textContent = content
+			})
+		})
+	</script>
+</svelte:head>
 
 <div class="wbw-container">
 	<article class="wbw-content">

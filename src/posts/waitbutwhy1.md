@@ -5,29 +5,28 @@ date: '2024-2-20'
 layout: waitbutwhy
 ---
 
-TODO : need remark-directive ?
+# TESTS CUSTOM
 
-:::main
-Lorem:br
-ipsum.
-PICK ME !
+Test 1 : popup bleus rond ((1)), et un 2e ((2))
+Test 2 : popup carrés gris {(1)}, et un 2e {(2)}
+Test 3 : mélangés ((3)){(3)}
+Test 4 : texte plus complexe ((4)){(4)}
 
-::hr
+(1): Comment ça va ?
+(2): Ca baigne et toi ?
+(3): Comme un dimanche.
+{1}: pas intéressant
+{2}: rien à voir circulez
+{3}: non, sérieux, c'est chiant
+(4):@"
+Bon là c'est du texte lourd. Blah Blah.
+Nouvelle ligne ici normalement.
+Et une 3e on se sent plus.
+"@
 
-A :i[lovely] language know as :abbr.
-
-:::
-
-:::customclass class1
-    mon container
-    PICK ME !
-:::
-
-::leafcontainer
+# DEBUT ARTICLE
 
 **Note** : _Si ce billet m'a pris trois semaines à finir, c'est qu'en fouillant dans mes recherches sur l'Intelligence Artificielle, je n'arrivais pas à **croire** ce que je lisais. J'ai rapidement compris que ce qui se passait dans le monde de l'IA n'était pas seulement une question importante, mais de loin LA question la plus importante pour notre avenir. Je voulais donc en apprendre le plus possible à ce sujet, et ceci fait, je voulais m'assurer d'écrire un article qui explique vraiment tout ce que cela recouvre et pourquoi c'est si crucial. Comme on pouvait s'y attendre, ça a pris des proportions énormes, alors j'ai divisé mon post en deux parties. Ceci est la Partie 1 — La Partie 2 est [ici](/waitbutwhy2)._
-
-
 
 [ici](/waitbutwhy2)
 

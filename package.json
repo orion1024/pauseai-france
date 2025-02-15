@@ -71,7 +71,7 @@
 		"remark-parse": "^11.0.0",
 		"remark-toc": "^9.0.0",
 		"remark-unwrap-images": "^4.0.1",
-		"shiki": "^1.29.1",
+		"shiki": "^1.29.2",
 		"svelte-french-toast": "^1.2.0",
 		"svelte-inview": "^4.0.4",
 		"svelte-markdown": "^0.4.1",
