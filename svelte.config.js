@@ -36,8 +36,8 @@ const mdsvexOptions = {
 		// remarkDirective,
 		remarkCustomContainer,
 		remarkUnwrapImages,
-		[remarkToc, { tight: true }],
-		remarkFrenchTypography
+		[remarkToc, { tight: true }] //,
+		// remarkFrenchTypography
 	],
 	rehypePlugins: [rehypeSlug, faqPlugin]
 }

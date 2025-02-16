@@ -10,35 +10,86 @@
 			document.querySelectorAll('.blue-popup').forEach((popup) => {
 				const number = popup.dataset.number
 				const content = window.popupContent.blue.get(number)
-				popup.querySelector('.popup-content').textContent = content
+				popup.querySelector('.popup-content').innerHTML = content
 			})
 
 			document.querySelectorAll('.gray-popup').forEach((popup) => {
 				const number = popup.dataset.number
 				const content = window.popupContent.gray.get(number)
-				popup.querySelector('.popup-content').textContent = content
+				popup.querySelector('.popup-content').innerHTML = content
 			})
 
 			// Close popups when clicking outside
 			document.addEventListener(
 				'click',
 				(e) => {
-					if (!e.target.matches('.popup-trigger')) {
-						document.querySelectorAll('.popup-content').forEach((content) => {
+					// if (!e.target.matches('.popup-trigger')) {
+					document.querySelectorAll('.popup-content').forEach((content) => {
+						if (content !== e.target.nextElementSibling) {
 							content.style.display = 'none'
-						})
-					}
+						}
+					})
+					// }
 				},
 				true
 			)
 
+			// Function to position popup
+			function positionPopup(trigger, content) {
+				const rect = trigger.getBoundingClientRect()
+				const spaceBelow = window.innerHeight - rect.bottom
+				const spaceAbove = rect.top
+
+				const isOnTop = content.style.bottom === '100%'
+
+				if (isOnTop && spaceAbove > 200) {
+					// Keep it on top
+					content.style.top = 'auto'
+					content.style.bottom = '100%'
+					content.style.marginTop = '0'
+					content.style.marginBottom = '12px'
+				} else if (!isOnTop && spaceBelow > 200) {
+					// Keep it on bottom
+					content.style.top = '100%'
+					content.style.bottom = 'auto'
+					content.style.marginTop = '12px'
+					content.style.marginBottom = '0'
+				} else if (spaceBelow > spaceAbove) {
+					// Move to bottom
+					content.style.top = '100%'
+					content.style.bottom = 'auto'
+					content.style.marginTop = '12px'
+					content.style.marginBottom = '0'
+				} else {
+					// Move to top
+					content.style.top = 'auto'
+					content.style.bottom = '100%'
+					content.style.marginTop = '0'
+					content.style.marginBottom = '12px'
+				}
+			}
+
 			// Click handlers
 			document.querySelectorAll('.popup-trigger').forEach((trigger) => {
 				trigger.addEventListener('click', (e) => {
+					// const content = e.target.nextElementSibling
+					// content.style.left = '0'
+					// content.style.top = '100%'
+					// content.style.display = content.style.display === 'block' ? 'none' : 'block'
+
 					const content = e.target.nextElementSibling
-					content.style.left = '0'
-					content.style.top = '100%'
+					positionPopup(trigger, content)
 					content.style.display = content.style.display === 'block' ? 'none' : 'block'
+				})
+			})
+
+			// Scroll handler
+			window.addEventListener('scroll', () => {
+				document.querySelectorAll('.popup-content').forEach((content) => {
+					if (content.style.display === 'block') {
+						const trigger = content.previousElementSibling
+						positionPopup(trigger, content)
+					}
 				})
 			})
 		})
@@ -80,9 +131,31 @@
 		margin: 2rem auto;
 	}
 
-	:global(.popup-trigger) {
+	:global(.blue-popup .popup-trigger) {
+		background: #5fa1cc;
+		color: white;
+		border-radius: 50%;
+		padding: 2px 6px;
+		font-size: 0.75em;
+		vertical-align: super;
 		cursor: pointer;
-		color: #0066cc;
+	}
+	:global(.blue-popup .popup-trigger:hover) {
+		background: #94c0dd;
+	}
+
+	:global(.gray-popup .popup-trigger) {
+		background: #cccccc;
+		color: white;
+		padding: 1px 4px;
+		font-size: 0.6em;
+		vertical-align: super;
+		cursor: pointer;
+		transition: background-color 0.2s;
+	}
+
+	:global(.gray-popup .popup-trigger:hover) {
+		background: #909090;
 	}
 
 	:global(.popup-content) {
@@ -90,9 +163,10 @@
 		position: absolute;
 		background: white;
 		border: 1px solid #ccc;
+		border-radius: 8px;
 		padding: 10px;
 		width: max-content;
-		max-width: 50ch;
+		max-width: 40ch;
 		white-space: normal;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 		z-index: 100;
@@ -104,7 +178,7 @@
 	:global(.popup-content::before) {
 		content: '';
 		position: absolute;
-		top: -9px;
+		top: -8px;
 		left: 10px;
 		width: 15px;
 		height: 15px;
@@ -112,6 +186,12 @@
 		border-left: 1px solid #ccc;
 		border-top: 1px solid #ccc;
 		transform: rotate(45deg);
+	}
+
+	:global(.popup-content[style*='bottom: 100%']::before) {
+		top: auto;
+		bottom: -8px;
+		transform: rotate(225deg);
 	}
 
 	:global(.blue-popup),

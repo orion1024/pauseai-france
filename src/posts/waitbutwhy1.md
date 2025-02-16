@@ -11,6 +11,8 @@ Test 1 : popup bleus rond ((1)), et un 2e ((2))
 Test 2 : popup carrés gris {(1)}, et un 2e {(2)}
 Test 3 : mélangés ((3)){(3)}
 Test 4 : texte plus complexe ((4)){(4)}
+Test 5 : here string monoligne ((5))
+Test 6 : grandeur nature, très long ((6))
 
 (1): Comment ça va ?
 (2): Ca baigne et toi ?
@@ -18,10 +20,19 @@ Test 4 : texte plus complexe ((4)){(4)}
 {1}: pas intéressant
 {2}: rien à voir circulez
 {3}: non, sérieux, c'est chiant
+{4}: @"
+Et si je vous le dis en plusieurs lignes ?
+Ca comprend ?
+"@
 (4):@"
 Bon là c'est du texte lourd. Blah Blah.
 Nouvelle ligne ici normalement.
 Et une 3e on se sent plus.
+"@
+
+(5):Mieux avec une seule ligne
+(6):@"
+If you don’t know the deal with the notes, there are two different types. The blue circles are the fun/interesting ones you should read. They’re for extra info or thoughts that I didn’t want to put in the main text because either it’s just tangential thoughts on something or because I want to say something a notch too weird to just be there in the normal text.
 "@
 
 # DEBUT ARTICLE
