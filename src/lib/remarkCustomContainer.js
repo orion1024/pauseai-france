@@ -17,12 +17,16 @@ export function remarkCustomContainer() {
 					fullMatch: match[0],
 					script: `<script>window.popupContent.blue.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
 				}))
-				// if (blueContents.length > 0) {
-				// 	console.log(
-				// 		'Blue Contents:',
-				// 		blueContents.map((m) => ({ number: m.number, content: m.content }))
-				// 	)
-				// }
+				if (blueContents.length > 0) {
+					console.log(
+						'Blue Contents:',
+						blueContents.map((m) => ({
+							number: m.number,
+							content: m.content,
+							fullMatch: m.fullMatch
+						}))
+					)
+				}
 
 				let blueIndicators = [...value.matchAll(BLUE_POPUP_INDICATOR)].map((match) => ({
 					number: match[1],
@@ -70,6 +74,16 @@ export function remarkCustomContainer() {
 
 				let newValue = value
 
+				if (
+					blueIndicators.length ||
+					grayIndicators.length ||
+					blueContents.length ||
+					grayContents.length
+				) {
+					newValue = newValue.replace(/\n/g, '<br>')
+				}
+
+				// TODO : this leaves empty line, need to tweak the replacement
 				blueContents.forEach(({ fullMatch, script }) => {
 					newValue = newValue.replace(fullMatch, script)
 				})

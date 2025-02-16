@@ -14,7 +14,7 @@ Test 4 : texte plus complexe ((4)){(4)}
 
 (1): Comment ça va ?
 (2): Ca baigne et toi ?
-(3): Comme un dimanche.
+(3): Comme un dimanche. La séance de sport d'hier était top, il y avait plein de monde.
 {1}: pas intéressant
 {2}: rien à voir circulez
 {3}: non, sérieux, c'est chiant

@@ -84,27 +84,30 @@
 		cursor: pointer;
 		color: #0066cc;
 	}
+
 	:global(.popup-content) {
 		display: none;
 		position: absolute;
 		background: white;
 		border: 1px solid #ccc;
 		padding: 10px;
-		max-width: 300px;
+		width: max-content;
+		max-width: 50ch;
+		white-space: normal;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 		z-index: 100;
 		top: 100%;
 		left: 0;
-		margin-top: 8px;
+		margin-top: 12px;
 	}
 
 	:global(.popup-content::before) {
 		content: '';
 		position: absolute;
-		top: -6px;
+		top: -9px;
 		left: 10px;
-		width: 10px;
-		height: 10px;
+		width: 15px;
+		height: 15px;
 		background: white;
 		border-left: 1px solid #ccc;
 		border-top: 1px solid #ccc;
