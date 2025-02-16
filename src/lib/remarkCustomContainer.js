@@ -17,12 +17,12 @@ export function remarkCustomContainer() {
 					fullMatch: match[0],
 					script: `<script>window.popupContent.blue.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
 				}))
-				if (blueContents.length > 0) {
-					console.log(
-						'Blue Contents:',
-						blueContents.map((m) => ({ number: m.number, content: m.content }))
-					)
-				}
+				// if (blueContents.length > 0) {
+				// 	console.log(
+				// 		'Blue Contents:',
+				// 		blueContents.map((m) => ({ number: m.number, content: m.content }))
+				// 	)
+				// }
 
 				let blueIndicators = [...value.matchAll(BLUE_POPUP_INDICATOR)].map((match) => ({
 					number: match[1],
@@ -32,12 +32,12 @@ export function remarkCustomContainer() {
     <span class="popup-content">fake content</span>
   </span>`
 				}))
-				if (blueIndicators.length > 0) {
-					console.log(
-						'Blue Indicators:',
-						blueIndicators.map((m) => ({ number: m.number, html: m.html }))
-					)
-				}
+				// if (blueIndicators.length > 0) {
+				// 	console.log(
+				// 		'Blue Indicators:',
+				// 		blueIndicators.map((m) => ({ number: m.number, html: m.html }))
+				// 	)
+				// }
 
 				let grayIndicators = [...value.matchAll(GRAY_POPUP_INDICATOR)].map((match) => ({
 					number: match[1],
@@ -48,12 +48,12 @@ export function remarkCustomContainer() {
   </span>`
 				}))
 
-				if (grayIndicators.length > 0) {
-					console.log(
-						'Gray Indicators:',
-						grayIndicators.map((m) => ({ number: m.number, html: m.html }))
-					)
-				}
+				// if (grayIndicators.length > 0) {
+				// 	console.log(
+				// 		'Gray Indicators:',
+				// 		grayIndicators.map((m) => ({ number: m.number, html: m.html }))
+				// 	)
+				// }
 
 				let grayContents = [...value.matchAll(GRAY_POPUP_CONTENT)].map((match) => ({
 					number: match[1],
@@ -61,12 +61,12 @@ export function remarkCustomContainer() {
 					fullMatch: match[0],
 					script: `<script>window.popupContent.gray.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
 				}))
-				if (grayContents.length > 0) {
-					console.log(
-						'Gray Contents:',
-						grayContents.map((m) => ({ number: m.number, content: m.content }))
-					)
-				}
+				// if (grayContents.length > 0) {
+				// 	console.log(
+				// 		'Gray Contents:',
+				// 		grayContents.map((m) => ({ number: m.number, content: m.content }))
+				// 	)
+				// }
 
 				let newValue = value
 

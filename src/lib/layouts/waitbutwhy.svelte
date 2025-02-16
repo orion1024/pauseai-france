@@ -6,6 +6,7 @@
 		}
 
 		window.addEventListener('DOMContentLoaded', () => {
+			// Refresh popup content
 			document.querySelectorAll('.blue-popup').forEach((popup) => {
 				const number = popup.dataset.number
 				const content = window.popupContent.blue.get(number)
@@ -16,6 +17,29 @@
 				const number = popup.dataset.number
 				const content = window.popupContent.gray.get(number)
 				popup.querySelector('.popup-content').textContent = content
+			})
+
+			// Close popups when clicking outside
+			document.addEventListener(
+				'click',
+				(e) => {
+					if (!e.target.matches('.popup-trigger')) {
+						document.querySelectorAll('.popup-content').forEach((content) => {
+							content.style.display = 'none'
+						})
+					}
+				},
+				true
+			)
+
+			// Click handlers
+			document.querySelectorAll('.popup-trigger').forEach((trigger) => {
+				trigger.addEventListener('click', (e) => {
+					const content = e.target.nextElementSibling
+					content.style.left = '0'
+					content.style.top = '100%'
+					content.style.display = content.style.display === 'block' ? 'none' : 'block'
+				})
 			})
 		})
 	</script>
@@ -60,7 +84,6 @@
 		cursor: pointer;
 		color: #0066cc;
 	}
-
 	:global(.popup-content) {
 		display: none;
 		position: absolute;
@@ -69,11 +92,23 @@
 		padding: 10px;
 		max-width: 300px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+		z-index: 100;
+		top: 100%;
+		left: 0;
+		margin-top: 8px;
 	}
 
-	:global(.blue-popup:hover .popup-content),
-	:global(.gray-popup:hover .popup-content) {
-		display: block;
+	:global(.popup-content::before) {
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 10px;
+		width: 10px;
+		height: 10px;
+		background: white;
+		border-left: 1px solid #ccc;
+		border-top: 1px solid #ccc;
+		transform: rotate(45deg);
 	}
 
 	:global(.blue-popup),
