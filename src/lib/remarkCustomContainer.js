@@ -29,7 +29,7 @@ export function remarkCustomContainer() {
 					fullMatch: match[0],
 					html: `<span class="blue-popup" data-number="${match[1]}">
     <span class="popup-trigger">${match[0]}</span>
-    <span class="popup-content">TESTONS</span>
+    <span class="popup-content">fake content</span>
   </span>`
 				}))
 				if (blueIndicators.length > 0) {
@@ -44,7 +44,7 @@ export function remarkCustomContainer() {
 					fullMatch: match[0],
 					html: `<span class="gray-popup" data-number="${match[1]}">
     <span class="popup-trigger">${match[0]}</span>
-    <span class="popup-content"></span>
+    <span class="popup-content">fake content</span>
   </span>`
 				}))
 
