@@ -64,12 +64,12 @@ export function remarkCustomContainer() {
   </span>`
 				}))
 
-				if (grayIndicators.length > 0) {
-					console.log(
-						'Gray Indicators:',
-						grayIndicators.map((m) => ({ number: m.number, html: m.html }))
-					)
-				}
+				// if (grayIndicators.length > 0) {
+				// 	console.log(
+				// 		'Gray Indicators:',
+				// 		grayIndicators.map((m) => ({ number: m.number, html: m.html }))
+				// 	)
+				// }
 
 				let grayContents = [...value.matchAll(GRAY_POPUP_CONTENT)].map((match) => ({
 					number: match[1],
@@ -78,16 +78,16 @@ export function remarkCustomContainer() {
 					script: `<script>window.popupContent.gray.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
 				}))
 
-				if (grayContents.length > 0) {
-					console.log(
-						'Gray Contents:',
-						grayContents.map((m) => ({
-							number: m.number,
-							content: m.content,
-							fullMatch: m.fullMatch
-						}))
-					)
-				}
+				// if (grayContents.length > 0) {
+				// 	console.log(
+				// 		'Gray Contents:',
+				// 		grayContents.map((m) => ({
+				// 			number: m.number,
+				// 			content: m.content,
+				// 			fullMatch: m.fullMatch
+				// 		}))
+				// 	)
+				// }
 
 				let grayMultilineContents = [...value.matchAll(GRAY_MULTILINE_CONTENT)].map((match) => ({
 					number: match[1],
@@ -96,16 +96,16 @@ export function remarkCustomContainer() {
 					script: `<script>window.popupContent.gray.set('${match[1]}', ${JSON.stringify(match[2].replace(/\n/g, '<br>'))});</script>`
 				}))
 
-				if (grayMultilineContents.length > 0) {
-					console.log(
-						'Gray Multiline Contents:',
-						grayMultilineContents.map((m) => ({
-							number: m.number,
-							content: m.content,
-							fullMatch: m.fullMatch
-						}))
-					)
-				}
+				// if (grayMultilineContents.length > 0) {
+				// 	console.log(
+				// 		'Gray Multiline Contents:',
+				// 		grayMultilineContents.map((m) => ({
+				// 			number: m.number,
+				// 			content: m.content,
+				// 			fullMatch: m.fullMatch
+				// 		}))
+				// 	)
+				// }
 
 				// Merging them
 				let allContents = [

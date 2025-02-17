@@ -78,8 +78,19 @@
 					// content.style.display = content.style.display === 'block' ? 'none' : 'block'
 
 					const content = e.target.nextElementSibling
-					positionPopup(trigger, content)
-					content.style.display = content.style.display === 'block' ? 'none' : 'block'
+					if (content.style.display === 'block') {
+						content.style.transform = 'scale(0)'
+						content.style.opacity = '0'
+						setTimeout(() => (content.style.display = 'none'), 200)
+					} else {
+						positionPopup(trigger, content)
+						content.style.display = 'block'
+						content.style.transform = 'scale(0)'
+						requestAnimationFrame(() => {
+							content.style.transform = 'scale(1)'
+							content.style.opacity = '1'
+						})
+					}
 				})
 			})
 
@@ -173,6 +184,22 @@
 		top: 100%;
 		left: 0;
 		margin-top: 12px;
+
+		transform-origin: 10% 0;
+		transition:
+			transform 0.2s,
+			opacity 0.2s;
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	:global(.popup-content[style*='display: block']) {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	:global(.popup-content[style*='bottom: 100%']) {
+		transform-origin: 10% 100%;
 	}
 
 	:global(.popup-content::before) {
