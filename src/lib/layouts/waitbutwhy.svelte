@@ -118,14 +118,25 @@
 		background-color: white;
 		min-height: 100vh;
 		padding: 2rem;
+		width: 100vw; /* Use viewport width */
+		margin-left: calc(-50vw + 50%); /* Center the container */
+		margin-right: calc(-50vw + 50%);
+		position: relative; /* Establish positioning context */
 	}
 
 	:global(.wbw-content) {
-		max-width: 100%;
+		max-width: 800px;
 		margin: 0 auto;
 		font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
 		font-size: 100%;
 		line-height: 1.6;
+	}
+
+	:global(.wbw-content img) {
+		max-width: 85%;
+		height: auto;
+		display: block;
+		margin: 2rem auto;
 	}
 
 	:global(.wbw-content a) {
@@ -224,5 +235,19 @@
 	:global(.blue-popup),
 	:global(.gray-popup) {
 		position: relative;
+	}
+
+	:global(.bluebox) {
+		background-color: #4c96c6;
+		padding: 12px;
+		color: white;
+		margin: 8px 0;
+	}
+
+	:global(.bluebox2) {
+		background-color: #356585;
+		padding: 12px;
+		color: white;
+		margin: 8px 0;
 	}
 </style>
