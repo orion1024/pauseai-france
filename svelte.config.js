@@ -16,7 +16,7 @@ import remarkToc from 'remark-toc'
 import rehypeSlug from 'rehype-slug'
 import { faqPlugin } from './src/lib/faqPlugin.js'
 import { remarkFrenchTypography } from './src/lib/typographyPlugin.js'
-import { rehypeWBWPopups, rehypeWBWPopups2 } from './src/lib/rehypeWBWPlugins.js'
+import { rehypeWBWPopups2 } from './src/lib/rehypeWBWPlugins.js'
 import { rehypeWBWBlueBoxes } from './src/lib/rehypeWBWPlugins.js'
 
 import { config as dotenv } from 'dotenv'

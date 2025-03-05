@@ -1,4 +1,5 @@
 import { SKIP, visit } from 'unist-util-visit'
+import {toHtml} from 'hast-util-to-html'
 
 const BLUE_POPUP_INDICATOR = /\(\((\d+)\)\)/g
 const GRAY_POPUP_INDICATOR = /\{\((\d+)\)\}/g
@@ -22,7 +23,8 @@ const BLUEBOX2_CLASS = 'bluebox2'
 export function rehypeWBWPopups2() {
 	return (/** @type {any} */ tree) => {
 		const debugDisplayOn = 1
-
+		
+		// First pass: Process regular popups
 		visit(tree, 'text', (node, index, parent) => {
 			if (!parent || typeof index !== 'number') return
 
@@ -52,41 +54,41 @@ export function rehypeWBWPopups2() {
 			}))
 
 			// Process contents
-			let blueContents = [...value.matchAll(BLUE_POPUP_CONTENT)].map((match) => ({
-				number: match[1],
-				content: match[2].replace(/\n/g, '<br>'),
-				fullMatch: match[0],
-				script: `<script>window.popupContent.blue.set('${match[1]}', ${JSON.stringify(match[2].replace(/\n/g, '<br>'))});</script>`
-			}))
+			// let blueContents = [...value.matchAll(BLUE_POPUP_CONTENT)].map((match) => ({
+			// 	number: match[1],
+			// 	content: match[2].replace(/\n/g, '<br>'),
+			// 	fullMatch: match[0],
+			// 	script: `<script>window.popupContent.blue.set('${match[1]}', ${JSON.stringify(match[2].replace(/\n/g, '<br>'))});</script>`
+			// }))
 
-			if (debugDisplayOn === 1 && blueContents.length > 0) {
-				console.log(
-					'Blue Contents:',
-					blueContents.map((m) => ({
-						number: m.number,
-						content: m.content,
-						fullMatch: m.fullMatch
-					}))
-				)
-			}
+			// if (debugDisplayOn === 1 && blueContents.length > 0) {
+			// 	console.log(
+			// 		'Blue Contents:',
+			// 		blueContents.map((m) => ({
+			// 			number: m.number,
+			// 			content: m.content,
+			// 			fullMatch: m.fullMatch
+			// 		}))
+			// 	)
+			// }
 
-			let grayContents = [...value.matchAll(GRAY_POPUP_CONTENT)].map((match) => ({
-				number: match[1],
-				content: match[2].replace(/\n/g, '<br>'),
-				fullMatch: match[0],
-				script: `<script>window.popupContent.gray.set('${match[1]}', ${JSON.stringify(match[2].replace(/\n/g, '<br>'))});</script>`
-			}))
+			// let grayContents = [...value.matchAll(GRAY_POPUP_CONTENT)].map((match) => ({
+			// 	number: match[1],
+			// 	content: match[2].replace(/\n/g, '<br>'),
+			// 	fullMatch: match[0],
+			// 	script: `<script>window.popupContent.gray.set('${match[1]}', ${JSON.stringify(match[2].replace(/\n/g, '<br>'))});</script>`
+			// }))
 
 			// Apply transformations
 			let newValue = value
 
-			const allContents = [...blueContents, ...grayContents]
-			// Replace content definitions with scripts
-			allContents.forEach(({ fullMatch, script }) => {
-				const replaceString = fullMatch.replace(/\n/g, '<br>')
-				newValue = newValue.replace(replaceString + '<br>', script)
-				newValue = newValue.replace(replaceString, script)
-			})
+			// const allContents = [...blueContents, ...grayContents]
+			// // Replace content definitions with scripts
+			// allContents.forEach(({ fullMatch, script }) => {
+			// 	const replaceString = fullMatch.replace(/\n/g, '<br>')
+			// 	newValue = newValue.replace(replaceString + '<br>', script)
+			// 	newValue = newValue.replace(replaceString, script)
+			// })
 
 			const allIndicators = [...blueIndicators, ...grayIndicators]
 			// Replace indicators with HTML spans
@@ -104,8 +106,79 @@ export function rehypeWBWPopups2() {
 			}
 		})
 
+		// Second pass: Process multiline content
+		processMultilineContent(tree)
+
 		return tree
 	}
+}
+
+// Helper function to process multiline content
+function processMultilineContent(/** @type {any} */ tree) {
+	
+	// Process each parent node that might contain children
+	function processNode(/** @type {any} */ node) {
+		if (!node.children || node.children.length === 0) return
+		
+		// Linear loop through children
+		for (let i = 0; i < node.children.length; i++) {
+			const child = node.children[i]
+			
+			// Process nested children first (depth-first)
+			if (child.children) {
+				processNode(child)
+			}
+			
+			// Check if this is a text node with a multiline start pattern
+			if (child.type === 'text' && 
+				(BLUE_MULTILINE_CONTENT_START_PATTERN.test(child.value) || 
+				 GRAY_MULTILINE_CONTENT_START_PATTERN.test(child.value))) {
+				
+				const isBlue = BLUE_MULTILINE_CONTENT_START_PATTERN.test(child.value)
+				const match = child.value.match(isBlue ? BLUE_MULTILINE_CONTENT_START_PATTERN : GRAY_MULTILINE_CONTENT_START_PATTERN)
+				const popupNumber = match?.[1]
+				
+				if (!popupNumber) continue
+				
+				// Collect nodes until end pattern
+				const contentNodes = []
+				let j = i + 1
+				let endFound = false
+				
+				while (j < node.children.length && !endFound) {
+					const currentNode = node.children[j]
+					if (currentNode.type === 'text' && MULTILINE_CONTENT_END_PATTERN.test(currentNode.value)) {
+						endFound = true
+					} else {
+						contentNodes.push(currentNode)
+					}
+					j++
+				}
+				
+				if (endFound) {
+					// Convert collected nodes to HTML
+					const htmlContent = contentNodes.map(n => toHtml(n)).join('')
+					const popupType = isBlue ? 'blue' : 'gray'
+					
+					// Create script node
+					const scriptNode = {
+						type: 'raw',
+						value: `<script>window.popupContent.${popupType}.set('${popupNumber}', ${JSON.stringify(htmlContent)});</script>`
+					}
+					
+					// Replace all nodes (start pattern, content nodes, and end pattern) with script
+					const deleteCount = j - i
+					node.children.splice(i, deleteCount, scriptNode)
+					
+					// Continue from the new position
+					i = i + 1
+				}
+			}
+		}
+	}
+	
+	// Start processing from the root
+	processNode(tree)
 }
 
 export function rehypeWBWBlueBoxes() {
@@ -232,12 +305,6 @@ export function rehypeWBWPopups() {
 					script: `<script>window.popupContent.blue.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
 				}))
 
-				let blueMultilineContents = [...value.matchAll(BLUE_MULTILINE_CONTENT)].map((match) => ({
-					number: match[1],
-					content: match[2].replace(/\n/g, '<br>'),
-					fullMatch: match[0],
-					script: `<script>window.popupContent.blue.set('${match[1]}', ${JSON.stringify(match[2].replace(/\n/g, '<br>'))});</script>`
-				}))
 
 				let grayIndicators = [...value.matchAll(GRAY_POPUP_INDICATOR)].map((match) => ({
 					number: match[1],
@@ -255,18 +322,9 @@ export function rehypeWBWPopups() {
 					script: `<script>window.popupContent.gray.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
 				}))
 
-				let grayMultilineContents = [...value.matchAll(GRAY_MULTILINE_CONTENT)].map((match) => ({
-					number: match[1],
-					content: match[2].replace(/\n/g, '<br>'),
-					fullMatch: match[0],
-					script: `<script>window.popupContent.gray.set('${match[1]}', ${JSON.stringify(match[2].replace(/\n/g, '<br>'))});</script>`
-				}))
-
 				// Merging them
 				let allContents = [
-					...blueMultilineContents,
 					...blueContents,
-					...grayMultilineContents,
 					...grayContents
 				]
 				let allIndicators = [...blueIndicators, ...grayIndicators]
