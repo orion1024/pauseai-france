@@ -4,15 +4,20 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdsvex, escapeSvelte } from 'mdsvex'
 import { getHighlighter } from 'shiki'
 import remarkUnwrapImages from 'remark-unwrap-images'
-import remarkParse from 'remark-parse'
+
+// TODO clean comments
+// import remarkParse from 'remark-parse'
+// import remarkRehype from 'remark-rehype'
+// import rehypeStringify from 'rehype-stringify'
+// import remarkDirective from 'remark-directive'
+// import {rehypeCustomClass} from './src/lib/rehypeCustomclass.js'
+
 import remarkToc from 'remark-toc'
 import rehypeSlug from 'rehype-slug'
 import { faqPlugin } from './src/lib/faqPlugin.js'
 import { remarkFrenchTypography } from './src/lib/typographyPlugin.js'
-import remarkDirective from 'remark-directive'
-
-// import {rehypeCustomClass} from './src/lib/rehypeCustomclass.js'
-import { remarkCustomContainer } from './src/lib/remarkCustomContainer.js'
+import { rehypeWBWPopups, rehypeWBWPopups2 } from './src/lib/rehypeWBWPlugins.js'
+import { rehypeWBWBlueBoxes } from './src/lib/rehypeWBWPlugins.js'
 
 import { config as dotenv } from 'dotenv'
 dotenv()
@@ -34,12 +39,15 @@ const mdsvexOptions = {
 	remarkPlugins: [
 		// remarkParse,
 		// remarkDirective,
-		remarkCustomContainer,
+		// rehypeWBWBlueBoxes,
+		// rehypeWBWPopups,
+		// [remarkRehype, {allowDangerousHtml: true}],
+		// [rehypeStringify, {allowDangerousHtml: true}],
 		remarkUnwrapImages,
-		[remarkToc, { tight: true }] //,
-		// remarkFrenchTypography
+		[remarkToc, { tight: true }],
+		remarkFrenchTypography
 	],
-	rehypePlugins: [rehypeSlug, faqPlugin]
+	rehypePlugins: [rehypeWBWBlueBoxes, rehypeWBWPopups2, rehypeSlug, faqPlugin]
 }
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

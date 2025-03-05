@@ -20,20 +20,26 @@ Test 6 : grandeur nature, très long ((6))
 {1}: pas intéressant
 {2}: rien à voir circulez
 {3}: non, sérieux, c'est chiant
-{4}: @"
+{4}:@(
 Et si je vous le dis en plusieurs lignes ?
 Ca comprend ?
-"@
-(4):@"
+)
+
+(4):@(
 Bon là c'est du texte lourd. Blah Blah.
 Nouvelle ligne ici normalement.
 Et une 3e on se sent plus.
-"@
+Tests de format : _italique_, **gras**
+Tests URL : cliquer [ici pour google](https://www.google.com), [là pour youtube](https://www.youtube.com)
+)
 
 (5):Mieux avec une seule ligne
-(6):@"
-If you don’t know the deal with the notes, there are two different types. The blue circles are the fun/interesting ones you should read. They’re for extra info or thoughts that I didn’t want to put in the main text because either it’s just tangential thoughts on something or because I want to say something a notch too weird to just be there in the normal text.
-"@
+(6):@(
+If you don’t know the deal with the notes, there are two different types. The blue circles are the fun/interesting ones you should read.
+They’re for extra info or thoughts that I didn’t want to put in the main text because either it’s just tangential thoughts on something or because I want to say something a notch too weird to just be there in the normal text.
+)
+
+START_DEBUG
 
 ::bluebox-start::
 
@@ -45,6 +51,10 @@ We’re now in a diversion in a diversion. This is very fun.
 
 Anyway, I brought you here because there’s this really unfunny part of nanotechnology lore I need to tell you about. In older versions of nanotech theory, a proposed method of nanoassembly involved the creation of trillions of tiny nanobots that would work in conjunction to build something.
 
-::bluebox2-end::
+::bluebox-end::
+
+tesst
 
 ::bluebox-end::
+
+END_DEBUG
