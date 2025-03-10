@@ -43,7 +43,7 @@ Tests URL : cliquer [ici pour google](https://www.google.com), [là pour youtube
 (5):Mieux avec une seule ligne
 
 (6):@(
-If you don’t know the deal with the notes, there are two different types. The blue circles are the fun/interesting ones you should read.
+If you don’t know the deal with the notes, there are two different types. The blue circles are the fun/interesting ones you should read.  
 They’re for extra info or thoughts that I didn’t want to put in the main text because either it’s just tangential thoughts on something or because I want to say something a notch too weird to just be there in the normal text.
 )
 

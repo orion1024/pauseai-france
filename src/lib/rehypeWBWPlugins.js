@@ -3,8 +3,8 @@ import { toHtml } from 'hast-util-to-html'
 
 const BLUE_POPUP_INDICATOR = /\(\((\d+)\)\)/g
 const GRAY_POPUP_INDICATOR = /\{\((\d+)\)\}/g
-const BLUE_SINGLE_LINE_CONTENT_START_PATTERN = /^\((\d+)\)\s*:(?!@\()/g
-const GRAY_SINGLE_LINE_CONTENT_START_PATTERN = /^\{(\d+)\}\s*:(?!@\()/g
+const BLUE_SINGLE_LINE_CONTENT_START_PATTERN = /^\((\d+)\)\s*:(?!@\()/
+const GRAY_SINGLE_LINE_CONTENT_START_PATTERN = /^\{(\d+)\}\s*:(?!@\()/
 const BLUE_MULTILINE_CONTENT_START_PATTERN = /^\((\d+)\)\s*:@\($/m
 const GRAY_MULTILINE_CONTENT_START_PATTERN = /^\{(\d+)\}\s*:@\($/m
 const SINGLE_LINE_CONTENT_END_PATTERN = /\n/m
@@ -95,27 +95,34 @@ function processMultilineContent(/** @type {any} */ tree) {
 				processNode(child)
 			}
 
+			let valueToCheck
 			// Check if this is a text node with a multiline start pattern
 			if (child.type === 'text') {
+				valueToCheck = child.value
+			} else if (child.type === 'p' && child.children && child.children.length > 0 && child.children[0].type === 'text') {
+				valueToCheck = child.children[0].value
+			} else {
+				valueToCheck = null
+			}
+
+			if (valueToCheck) {
 				let isBlue = false
 				let isGray = false
 				let isMultiline = false
 				let startPattern
 				let endPattern
 
-				if (BLUE_SINGLE_LINE_CONTENT_START_PATTERN.test(child.value)) {
+				if (BLUE_SINGLE_LINE_CONTENT_START_PATTERN.test(valueToCheck)) {
 					isBlue = true
-					isMultiline = false
 					startPattern = BLUE_SINGLE_LINE_CONTENT_START_PATTERN
-					endPattern = SINGLE_LINE_CONTENT_END_PATTERN
-				} else if (GRAY_SINGLE_LINE_CONTENT_START_PATTERN.test(child.value)) {
+				} else if (GRAY_SINGLE_LINE_CONTENT_START_PATTERN.test(valueToCheck)) {
 					isGray = true
-					isMultiline = false
-				} else if (BLUE_MULTILINE_CONTENT_START_PATTERN.test(child.value)) {
+					startPattern = GRAY_SINGLE_LINE_CONTENT_START_PATTERN
+				} else if (BLUE_MULTILINE_CONTENT_START_PATTERN.test(valueToCheck)) {
 					isBlue = true
 					isMultiline = true
 					startPattern = BLUE_MULTILINE_CONTENT_START_PATTERN
-				} else if (GRAY_MULTILINE_CONTENT_START_PATTERN.test(child.value)) {
+				} else if (GRAY_MULTILINE_CONTENT_START_PATTERN.test(valueToCheck)) {
 					isGray = true
 					isMultiline = true
 					startPattern = GRAY_MULTILINE_CONTENT_START_PATTERN
@@ -133,7 +140,7 @@ function processMultilineContent(/** @type {any} */ tree) {
 					// console.log('Child value:', child.value)
 					// console.log('Is blue popup:', isBlue)
 					// console.log('Is gray popup:', isGray)
-
+					console.log('Is multiline:', isMultiline)
 					// console.log('Pattern used:', startPattern)
 
 					const match = child.value.match(startPattern)
@@ -143,7 +150,7 @@ function processMultilineContent(/** @type {any} */ tree) {
 					const fullMatch = match?.[0]
 
 					child.value = child.value.replace(fullMatch, '')
-					// console.log('Popup number:', popupNumber)
+					console.log('Popup number:', popupNumber)
 
 					if (!popupNumber) continue
 
@@ -154,29 +161,31 @@ function processMultilineContent(/** @type {any} */ tree) {
 
 					while (j < node.children.length && !endFound) {
 						const currentNode = node.children[j]
-						console.log(
-							'Processing node',
-							j,
-							'of',
-							node.children.length,
-							'type:',
-							currentNode.type,
-							'with value:',
-							currentNode?.value
-						)
+						if (!isMultiline) {
+							console.log(
+								'Processing node',
+								j,
+								'of',
+								node.children.length,
+								'type:',
+								currentNode.type,
+								'with value:',
+								JSON.stringify(currentNode?.value)
+							)
+						}
 						contentNodes.push(currentNode)
 						if (currentNode.type === 'text') {
-							endFound = MULTILINE_CONTENT_END_PATTERN.test(currentNode.value)
+							endFound = endPattern.test(currentNode.value)
 							if (endFound) {
-								currentNode.value = currentNode.value.replace(MULTILINE_CONTENT_END_PATTERN, '')
+								currentNode.value = currentNode.value.replace(endPattern, '')
 							}
 							// currentNode.value = currentNode.value.replace('\n', '<br>')
 						} else if (node.type === 'p' && node.children && node.children.length > 0) {
 							const firstChild = node.children[0]
 							if (firstChild.type === 'text') {
-								endFound = MULTILINE_CONTENT_END_PATTERN.test(firstChild.value)
+								endFound = endPattern.test(firstChild.value)
 								if (endFound) {
-									firstChild.value = firstChild.value.replace(MULTILINE_CONTENT_END_PATTERN, '')
+									firstChild.value = firstChild.value.replace(endPattern, '')
 								}
 							}
 						}
@@ -195,7 +204,7 @@ function processMultilineContent(/** @type {any} */ tree) {
 							value: `<script>window.popupContent.${popupType}.set('${popupNumber}', ${JSON.stringify(htmlContent)});</script>`
 						}
 
-						console.log('Inserted script node:', JSON.stringify(scriptNode))
+						// console.log('Inserted script node:', JSON.stringify(scriptNode))
 						// Replace all nodes (start pattern, content nodes, and end pattern) with script
 						const deleteCount = j - i + 1
 						node.children.splice(i, deleteCount, scriptNode)
@@ -207,7 +216,7 @@ function processMultilineContent(/** @type {any} */ tree) {
 			}
 		}
 	}
-	console.log('Tree structure:', JSON.stringify(tree, null, 2))
+	console.log('Tree:', JSON.stringify(tree, null, 2));
 	// Start processing from the root
 	processNode(tree)
 }
