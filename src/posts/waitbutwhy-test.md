@@ -14,7 +14,7 @@ Test 4 : texte plus complexe ((4)){(4)}
 Test 5 : here string monoligne ((5))  
 Test 6 : grandeur nature, très long ((6))
 
-(1): Comment ça va ?
+(1): Comment **ça va** ?
 
 (2): Ca baigne et toi ?
 
