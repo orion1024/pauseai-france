@@ -51,11 +51,11 @@ START_DEBUG
 
 ::bluebox-start::
 
-Nanotechnology is our word for technology that deals with the manipulation of matter that’s between 1 and 100 nanometers in size. A nanometer is a billionth of a meter, or a millionth of a millimeter, and this 1-100 range encompasses viruses (100 nm across), DNA (10 nm wide), and things as small as large molecules like hemoglobin (5 nm) and medium molecules like glucose (1 nm). If/when we conquer nanotechnology, the next step will be the ability to manipulate individual atoms, which are only one order of magnitude smaller (~.1 nm).
+Nanotechnology is our word for technology that deals with the manipulation of matter that’s between 1 and 100 nanometers in size. A nanometer is a billionth of a meter, or a millionth of a millimeter, and this 1-100 range encompasses viruses (100 nm across), DNA (10 nm wide), and things as small as large molecules like hemoglobin (5 nm) and medium molecules like glucose (1 nm). If/when we conquer nanotechnology, the next step will be the ability to manipulate individual atoms, which are only one order of magnitude smaller (~.1 nm). ((7))
 
 ::bluebox2-start::
 
-We’re now in a diversion in a diversion. This is very fun.
+We’re now in a diversion in a diversion. This is very fun. ((8))
 
 Anyway, I brought you here because there’s this really unfunny part of nanotechnology lore I need to tell you about. In older versions of nanotech theory, a proposed method of nanoassembly involved the creation of trillions of tiny nanobots that would work in conjunction to build something.
 
@@ -66,3 +66,9 @@ tesst
 ::bluebox-end::
 
 END_DEBUG
+
+
+
+(7): test dans une blue box
+
+(8): test dans une bluer box
