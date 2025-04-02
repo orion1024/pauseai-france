@@ -1,13 +1,13 @@
 ---
-title: Wait But Why Part 1
-description: First part of our analysis
-date: '2024-2-20'
+title: Wait But Why - IA - Partie 1
+description: Partie 1
+date: '20254-04-02'
 layout: waitbutwhy
 ---
 
 # La Révolution de l'IA : La Route vers la Superintelligence
 
-**22 janvier 2015 Par Tim Urban – traduction de Décembre 2024**
+**22 janvier 2015 Par Tim Urban – traduction de Février 2025**
 
 Note : _Si ce billet m'a pris trois semaines à finir, c'est qu'en fouillant dans mes recherches sur l'Intelligence Artificielle, je n'arrivais pas à croire ce que je lisais. J'ai rapidement compris que ce qui se passait dans le monde de l'IA n'était pas seulement une question importante, mais de loin LA question la plus importante pour notre avenir. Je voulais donc en apprendre le plus possible à ce sujet, et ceci fait, je voulais m'assurer d'écrire un article qui explique vraiment tout ce que cela recouvre et pourquoi c'est si crucial. Comme on pouvait s'y attendre, ça a pris des proportions énormes, alors j'ai divisé mon post en deux parties. Ceci est la Partie 1 — La Partie 2 est ici._
 
