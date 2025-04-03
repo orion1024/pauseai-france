@@ -138,16 +138,16 @@ function processMultilineContent(/** @type {any} */ tree) {
 					// console.log('Child value:', child.value)
 					// console.log('Is blue popup:', isBlue)
 					// console.log('Is gray popup:', isGray)
-					console.log('Is multiline:', isMultiline)
+					// console.log('Is multiline:', isMultiline)
 					// console.log('Pattern used:', startPattern)
 
 					const match = nodeToCheck.value.match(startPattern)
-					console.log('Match result:', match)
+					// console.log('Match result:', match)
 
 					const popupNumber = match?.[1]
 					const fullMatch = match?.[0]
 
-					console.log('Popup number:', popupNumber)
+					// console.log('Popup number:', popupNumber)
 
 					if (!popupNumber) continue
 
@@ -158,18 +158,18 @@ function processMultilineContent(/** @type {any} */ tree) {
 
 					while (j < node.children.length && !endFound) {
 						const currentNode = node.children[j]
-						if (!isMultiline) {
-							console.log(
-								'Processing node',
-								j,
-								'of',
-								node.children.length,
-								'type:',
-								currentNode.type,
-								'with value:',
-								JSON.stringify(currentNode?.value)
-							)
-						}
+						// if (!isMultiline) {
+						// 	// console.log(
+						// 	// 	'Processing node',
+						// 	// 	j,
+						// 	// 	'of',
+						// 	// 	node.children.length,
+						// 	// 	'type:',
+						// 	// 	currentNode.type,
+						// 	// 	'with value:',
+						// 	// 	JSON.stringify(currentNode?.value)
+						// 	// )
+						// }
 
 						let addCurrentNode = true
 
@@ -219,7 +219,7 @@ function processMultilineContent(/** @type {any} */ tree) {
 						// console.log('Inserted script node:', JSON.stringify(scriptNode))
 						// Replace all nodes (start pattern, content nodes, and end pattern) with script
 						const deleteCount = j - i
-						console.log('Replacing', deleteCount, 'nodes')
+						// console.log('Replacing', deleteCount, 'nodes')
 						node.children.splice(i, deleteCount, scriptNode)
 
 						// Continue from the new position
@@ -384,9 +384,9 @@ export function rehypeWBWPopupsOld() {
 
 				if (blueIndicators.length || grayIndicators.length) {
 					newValue = newValue.replace(/\n/g, '<br>')
-					if (debugDisplayOn === 1) {
-						console.log('newValue:', JSON.stringify(newValue))
-					}
+					// if (debugDisplayOn === 1) {
+					// 	console.log('newValue:', JSON.stringify(newValue))
+					// }
 				}
 
 				// allContents.forEach(({ fullMatch, script }) => {
