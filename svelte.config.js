@@ -8,7 +8,7 @@ import remarkToc from 'remark-toc'
 import rehypeSlug from 'rehype-slug'
 import { faqPlugin } from './src/lib/faqPlugin.js'
 import { remarkFrenchTypography } from './src/lib/typographyPlugin.js'
-import { rehypeWBWBlueBoxes, rehypeWBWPopups2 } from './src/lib/rehypeWBWPlugins.js'
+import { rehypeWBWColorBoxes, rehypeWBWPopups2 } from './src/lib/rehypeWBWPlugins.js'
 
 import { config as dotenv } from 'dotenv'
 dotenv()
@@ -28,7 +28,7 @@ const mdsvexOptions = {
 		}
 	},
 	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true }], remarkFrenchTypography],
-	rehypePlugins: [rehypeWBWBlueBoxes, rehypeWBWPopups2, rehypeSlug, faqPlugin]
+	rehypePlugins: [rehypeWBWColorBoxes, rehypeWBWPopups2, rehypeSlug, faqPlugin]
 }
 
 /** @type {import('@sveltejs/kit').Config} */

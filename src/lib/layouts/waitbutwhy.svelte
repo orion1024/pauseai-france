@@ -153,6 +153,7 @@
 		margin: 2rem auto;
 	}
 
+	/* Round blue triggers */
 	:global(.blue-popup .popup-trigger) {
 		background: #5fa1cc;
 		color: white;
@@ -162,10 +163,21 @@
 		vertical-align: super;
 		cursor: pointer;
 	}
+	/* Lighter blue when hovering */
 	:global(.blue-popup .popup-trigger:hover) {
 		background: #94c0dd;
 	}
+	/* Darker blue when inside a blue box */
+	:global(.bluebox .blue-popup .popup-trigger) {
+		background: #2b6a99;
+	}
 
+	/* Lighter blue when inside a blue box */
+	:global(.bluebox2 .blue-popup .popup-trigger) {
+		background: #4891c1;
+	}
+
+	/* Square gray triggers */
 	:global(.gray-popup .popup-trigger) {
 		background: #cccccc;
 		color: white;
@@ -176,10 +188,12 @@
 		transition: background-color 0.2s;
 	}
 
+	/* Darker gray when hovering */
 	:global(.gray-popup .popup-trigger:hover) {
 		background: #909090;
 	}
 
+	/* Style for content displayed when we clicked on the trigger. Force black on white background */
 	:global(.popup-content) {
 		display: none;
 		position: absolute;
@@ -188,6 +202,7 @@
 		border-radius: 8px;
 		padding: 10px;
 		width: max-content;
+		color: black;
 		max-width: 40ch;
 		white-space: normal;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -204,15 +219,17 @@
 		opacity: 0;
 	}
 
+	/* Appearing animation */
 	:global(.popup-content[style*='display: block']) {
 		transform: scale(1);
 		opacity: 1;
 	}
-
+	/* Appearing animation */
 	:global(.popup-content[style*='bottom: 100%']) {
 		transform-origin: 10% 100%;
 	}
 
+	/* Arrow pointing to the trigger 1/3 */
 	:global(.popup-content::before) {
 		content: '';
 		position: absolute;
@@ -225,18 +242,19 @@
 		border-top: 1px solid #ccc;
 		transform: rotate(45deg);
 	}
-
+	/* Arrow pointing to the trigger 2/3 */
 	:global(.popup-content[style*='bottom: 100%']::before) {
 		top: auto;
 		bottom: -8px;
 		transform: rotate(225deg);
 	}
-
+	/* Arrow pointing to the trigger 3/3 */
 	:global(.blue-popup),
 	:global(.gray-popup) {
 		position: relative;
 	}
 
+	/* Blue box */
 	:global(.bluebox) {
 		background-color: #4c96c6;
 		padding: 12px;
@@ -244,10 +262,19 @@
 		margin: 8px 0;
 	}
 
+	/* Blue box (darker) */
 	:global(.bluebox2) {
-		background-color: #356585;
+		background-color: #1d6391;
 		padding: 12px;
 		color: white;
 		margin: 8px 0;
+	}
+
+	:global(.graybox) {
+		background-color: #efefef;
+		padding: 12px;
+		color: black;
+		margin: 8px 0;
+		margin-left: 40px;
 	}
 </style>

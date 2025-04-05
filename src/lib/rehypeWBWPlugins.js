@@ -13,7 +13,8 @@ const MULTILINE_CONTENT_END_PATTERN = /^\)$/m
 // const GRAY_MULTILINE_CONTENT = /^\{(\d+)\}\s*:<\s?([\s\S]*?)\s?>$/gm
 const BLUEBOX_START_PATTERN = /bluebox\-start/g
 const BLUEBOX2_START_PATTERN = /bluebox2\-start/g
-const BLUEBOX_ALL_END_PATTERN = /bluebox\-end/g
+const GRAYBOX_START_PATTERN = /graybox\-start/g
+const COLOR_BOX_ALL_END_PATTERN = /colorbox\-end/g
 // const BLUEBOX2_END_PATTERN = /bluebox2\-end/g
 const BLUE_POPUP_CLASS = 'blue-popup'
 const GRAY_POPUP_CLASS = 'gray-popup'
@@ -21,6 +22,7 @@ const POPUP_TRIGGER_CLASS = 'popup-trigger'
 const POPUP_CONTENT_CLASS = 'popup-content'
 const BLUEBOX_CLASS = 'bluebox'
 const BLUEBOX2_CLASS = 'bluebox2'
+const GRAYBOX_CLASS = 'graybox'
 
 export function rehypeWBWPopups2() {
 	return (/** @type {any} */ tree) => {
@@ -234,13 +236,13 @@ function processMultilineContent(/** @type {any} */ tree) {
 	processNode(tree)
 }
 
-export function rehypeWBWBlueBoxes() {
+export function rehypeWBWColorBoxes() {
 	return (/** @type {any} */ tree) => {
 		if (!tree || !tree.children) {
 			return tree
 		}
 
-		function processBlueBoxes(/** @type {any} */ nodes) {
+		function processColorBoxes(/** @type {any} */ nodes) {
 			const /** @type {any} */ newNodes = []
 			let i = 0
 
@@ -250,15 +252,21 @@ export function rehypeWBWBlueBoxes() {
 				let pushNodeUnchanged = false
 				if (node.tagName === 'p') {
 					const startNodeValue = node.children?.[0]?.value
-					const isBox1 = BLUEBOX_START_PATTERN.test(startNodeValue)
-					const isBox2 = BLUEBOX2_START_PATTERN.test(startNodeValue)
-					// console.log('Is box1:', isBox1)
-					// console.log('Is box2:', isBox2)
+					const isBlueBox1 = BLUEBOX_START_PATTERN.test(startNodeValue)
+					const isBlueBox2 = BLUEBOX2_START_PATTERN.test(startNodeValue)
+					const isGrayBox1 = GRAYBOX_START_PATTERN.test(startNodeValue)
 
-					if (isBox1 || isBox2) {
+					// console.log('Is box1:', isBlueBox1)
+					// console.log('Is box2:', isBlueBox2)
+
+					if (isBlueBox1 || isBlueBox2 || isGrayBox1) {
 						// console.log('Node value:', startNodeValue)
 						// Determine box type
-						const boxClass = isBox2 ? BLUEBOX2_CLASS : BLUEBOX_CLASS
+						const boxClass = isBlueBox1
+							? BLUEBOX_CLASS
+							: isBlueBox2
+								? BLUEBOX2_CLASS
+								: GRAYBOX_CLASS
 						// console.log('Box class:', boxClass)
 
 						// Collect nodes until matching end tag
@@ -272,8 +280,10 @@ export function rehypeWBWBlueBoxes() {
 								// console.log('Processing inner node value:', value)
 
 								const isBoxStart =
-									BLUEBOX_START_PATTERN.test(value) || BLUEBOX2_START_PATTERN.test(value)
-								const isBoxEnd = BLUEBOX_ALL_END_PATTERN.test(value)
+									BLUEBOX_START_PATTERN.test(value) ||
+									BLUEBOX2_START_PATTERN.test(value) ||
+									GRAYBOX_START_PATTERN.test(value)
+								const isBoxEnd = COLOR_BOX_ALL_END_PATTERN.test(value)
 								// console.log('Is box start:', isBoxStart)
 								// console.log('Is box end:', isBoxEnd)
 								if (isBoxStart) {
@@ -295,7 +305,7 @@ export function rehypeWBWBlueBoxes() {
 						// console.log('Collected box nodes:', boxNodes)
 
 						// Process nested boxes recursively
-						const processedChildren = processBlueBoxes(boxNodes)
+						const processedChildren = processColorBoxes(boxNodes)
 						// console.log('Processed children:', processedChildren)
 
 						// Create box container
@@ -320,159 +330,8 @@ export function rehypeWBWBlueBoxes() {
 		}
 
 		// Start processing from root
-		tree.children = processBlueBoxes(tree.children)
+		tree.children = processColorBoxes(tree.children)
 
 		// console.log('End result:', JSON.stringify(tree.children, null, 2))
-	}
-}
-
-export function rehypeWBWPopupsOld() {
-	return (/** @type {any} */ tree) => {
-		let debugDisplayOn = 0
-		visit(tree, (node, index, parent) => {
-			if (node.type === 'text' && typeof index === 'number' && parent) {
-				let returnNewNode = 0
-				let value = node.value
-				if (value.includes('START_DEBUG')) {
-					debugDisplayOn = 1
-				}
-				if (value.includes('END_DEBUG')) {
-					debugDisplayOn = 0
-				}
-
-				let newValue = value
-
-				let blueIndicators = [...value.matchAll(BLUE_POPUP_INDICATOR)].map((match) => ({
-					number: match[1],
-					fullMatch: match[0],
-					html: `<span class="${BLUE_POPUP_CLASS}" data-number="${match[1]}">
-	<span class="${POPUP_TRIGGER_CLASS}">${match[1]}</span>
-	<span class="${POPUP_CONTENT_CLASS}">fake content</span>
-	</span>`
-				}))
-
-				// let blueContents = [...value.matchAll(BLUE_POPUP_CONTENT)].map((match) => ({
-				// 	number: match[1],
-				// 	content: match[2],
-				// 	fullMatch: match[0],
-				// 	script: `<script>window.popupContent.blue.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
-				// }))
-
-				let grayIndicators = [...value.matchAll(GRAY_POPUP_INDICATOR)].map((match) => ({
-					number: match[1],
-					fullMatch: match[0],
-					html: `<span class="${GRAY_POPUP_CLASS}" data-number="${match[1]}">
-	<span class="${POPUP_TRIGGER_CLASS}">${match[1]}</span>
-	<span class="${POPUP_CONTENT_CLASS}">fake content</span>
-	</span>`
-				}))
-
-				// let grayContents = [...value.matchAll(GRAY_POPUP_CONTENT)].map((match) => ({
-				// 	number: match[1],
-				// 	content: match[2],
-				// 	fullMatch: match[0],
-				// 	script: `<script>window.popupContent.gray.set('${match[1]}', ${JSON.stringify(match[2])});</script>`
-				// }))
-
-				// // Merging them
-				// let allContents = [
-				// 	...blueContents,
-				// 	...grayContents
-				// ]
-				let allIndicators = [...blueIndicators, ...grayIndicators]
-				// grayContents = []
-
-				if (blueIndicators.length || grayIndicators.length) {
-					newValue = newValue.replace(/\n/g, '<br>')
-					// if (debugDisplayOn === 1) {
-					// 	console.log('newValue:', JSON.stringify(newValue))
-					// }
-				}
-
-				// allContents.forEach(({ fullMatch, script }) => {
-				// 	let replaceString = fullMatch.replace(/\n/g, '<br>')
-				// 	newValue = newValue.replace(replaceString + '<br>', script)
-				// 	newValue = newValue.replace(replaceString, script)
-				// })
-
-				allIndicators.forEach(({ fullMatch, html }) => {
-					newValue = newValue.replace(fullMatch, html)
-				})
-
-				if (returnNewNode === 1) {
-					if (debugDisplayOn === 1) {
-						console.log('New HTML node value:', newValue)
-					}
-					const newNodes = [
-						{
-							type: 'html',
-							value: newValue
-						}
-					]
-					parent.children.splice(index, 1, ...newNodes)
-					return [SKIP, index + newNodes.length]
-				} else {
-					if (newValue !== node.value) {
-						node.value = newValue
-						if (debugDisplayOn === 1) {
-							console.log('node.value:', JSON.stringify(node.value))
-						}
-						node.type = 'html'
-					}
-				}
-			}
-			if (debugDisplayOn === 1) {
-				console.log('node :', JSON.stringify(node))
-			}
-		})
-
-		// if (debugDisplayOn === 1 && blueIndicators.length > 0) {
-		// 	console.log(
-		// 		'Blue Indicators:',
-		// 		blueIndicators.map((m) => ({ number: m.number, html: m.html }))
-		// 	)
-		// }
-
-		// if (debugDisplayOn === 1 && blueContents.length > 0) {
-		// 	console.log(
-		// 		'Blue Contents:',
-		// 		blueContents.map((m) => ({
-		// 			number: m.number,
-		// 			content: m.content,
-		// 			fullMatch: m.fullMatch
-		// 		}))
-		// 	)
-		// }
-
-		// if (debugDisplayOn === 1 && blueMultilineContents.length > 0) {
-		// 	console.log('Blue Multiline Contents:', blueMultilineContents.map(m => ({ number: m.number, content: m.content, fullMatch: m.fullMatch })));
-		// }
-
-		// if (debugDisplayOn === 1 && grayIndicators.length > 0) {
-		// 	console.log(
-		// 		'Gray Indicators:',
-		// 		grayIndicators.map((m) => ({ number: m.number, html: m.html }))
-		// 	)
-		// }
-		// if (debugDisplayOn === 1 && grayContents.length > 0) {
-		// 	console.log(
-		// 		'Gray Contents:',
-		// 		grayContents.map((m) => ({
-		// 			number: m.number,
-		// 			content: m.content,
-		// 			fullMatch: m.fullMatch
-		// 		}))
-		// 	)
-		// }
-		// if (debugDisplayOn === 1 && grayMultilineContents.length > 0) {
-		// 	console.log(
-		// 		'Gray Multiline Contents:',
-		// 		grayMultilineContents.map((m) => ({
-		// 			number: m.number,
-		// 			content: m.content,
-		// 			fullMatch: m.fullMatch
-		// 		}))
-		// 	)
-		// }
 	}
 }
