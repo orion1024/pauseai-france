@@ -200,7 +200,7 @@ function processMultilineContent(/** @type {any} */ tree) {
 							contentNodes.push(currentNode)
 						}
 
-						if (!endFound) {
+						if (!endFound || isMultiline) {
 							j++
 						}
 					}

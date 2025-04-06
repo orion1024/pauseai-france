@@ -261,6 +261,9 @@
 		color: white;
 		margin: 8px 0;
 	}
+	:global(.bluebox a) {
+		color: #afffc0;
+	}
 
 	/* Blue box (darker) */
 	:global(.bluebox2) {
@@ -268,6 +271,9 @@
 		padding: 12px;
 		color: white;
 		margin: 8px 0;
+	}
+	:global(.bluebox2 a) {
+		color: #afffc0;
 	}
 
 	:global(.graybox) {
