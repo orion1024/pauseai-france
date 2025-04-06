@@ -109,7 +109,7 @@ D'autres encore, comme le philosophe [Hubert Dreyfus](https://www.amazon.com/gp/
 
 Alors, que ressort-il de la confrontation de toutes ces opinions ?
 
-En 2013, Vincent C. Müller et Nick Bostrom ont mené une enquête qui a posé la question suivante à des centaines d'experts en IA lors d'une série de conférences : "Pour répondre à cette question, supposez que l'activité scientifique humaine continue sans accident majeur. Pour quelle année estimez-vous l'advenue probable (soit à 10% , 50% ou 90%) d'une telle AGI((4)) ?" On leur demandait une estimation optimiste de cette date (où ils estimaient à 10% la chance d'avoir une AGI), une estimation réaliste (l'année où ils pensaient que nous avions 50% de chances d'atteindre l'AGI - c'est-à-dire l'année après laquelle, selon eux, il serait davantage probable qu'improbable d'avoir une AGI), et une estimation prudente (la première année pour laquelle ils pouvaient affirmer avec 90% de certitude que nous aurions une AGI). Le résumé concis de ces sondages est le suivant:
+En 2013, Vincent C. Müller et Nick Bostrom ont mené une enquête qui a posé la question suivante à des centaines d'experts en IA lors d'une série de conférences : "Pour répondre à cette question, supposez que l'activité scientifique humaine continue sans accident majeur. Pour quelle année estimez-vous l'advenue probable (soit à 10% , 50% ou 90%) d'une telle AGI((4)) ?" On leur demandait une estimation optimiste de cette date (où ils estimaient à 10% la chance d'avoir une AGI), une estimation réaliste (l'année où ils pensaient que nous avions 50% de chances d'atteindre l'AGI - c'est-à-dire l'année après laquelle, selon eux, il serait davantage probable qu'improbable d'avoir une AGI), et une estimation prudente (la première année pour laquelle ils pouvaient affirmer avec 90% de certitude que nous aurions une AGI). Le résumé concis de ces sondages est le suivant :{(2)}
 
 Année médiane optimiste (probabilité de 10%) : **2022**  
 Année médiane réaliste (probabilité de 50%) : **2040**  
@@ -117,7 +117,7 @@ Année médiane pessimiste (probabilité de 90%) : **2075**
 
 Ainsi, le participant médian pense qu'il est plus probable qu'improbable que nous ayons une AGI dans 25 ans. La réponse médiane à 90% en 2075 signifie que si vous êtes adolescent en ce moment, le répondant médian, ainsi que plus de la moitié du groupe d'experts en IA, est presque certain que l'AGI sera atteinte au cours de votre vie.
 
-Une étude distincte, menée récemment par l'essayiste James Barrat lors de la conférence annuelle sur l'AGIde Ben Goertzel, a fait abstraction des pourcentages et a simplement demandé quand les participants pensaient que l'AGI serait atteinte - d'ici 2030, d'ici 2050, d'ici 2100, après 2100, ou jamais. Les résultats sont les suivants:
+Une étude distincte, menée récemment par l'essayiste James Barrat lors de la conférence annuelle sur l'AGIde Ben Goertzel, a fait abstraction des pourcentages et a simplement demandé quand les participants pensaient que l'AGI serait atteinte - d'ici 2030, d'ici 2050, d'ici 2100, après 2100, ou jamais. Les résultats sont les suivants :{(3)}
 
 D'ici 2030 : **42% des répondants**  
 D'ici 2050 : **25%**  
@@ -129,7 +129,7 @@ Assez proche des résultats de Müller et Bostrom. Dans l'enquête de Barrat, pl
 
 Mais ce n'est pas l'AGI qui constitue le point de non-retour, c'est l'ASI. Alors quand les experts pensent-ils que nous atteindrons l'ASI ?
 
-Müller et Bostrom ont également demandé aux experts à quelle probabilité ils évaluent l'obtention de l'ASI A) dans les deux ans suivant l'obtention de l'AGI (c'est-à-dire une explosion d'intelligence presque immédiate), et B) dans les 30 ans. Voici les résultats :
+Müller et Bostrom ont également demandé aux experts à quelle probabilité ils évaluent l'obtention de l'ASI A) dans les deux ans suivant l'obtention de l'AGI (c'est-à-dire une explosion d'intelligence presque immédiate), et B) dans les 30 ans. Voici les résultats :{(4)}
 
 La réponse médiane ne donne qu'une probabilité de **10%** à une transition AGI → ASI rapide (2 ans), mais une probabilité de **75%** à une transition plus longue de 30 ans ou moins.
 
@@ -182,7 +182,7 @@ D'où vient cette confiance ? C'est un sujet de débat. Les critiques pensent qu
 
 Nous examinerons les deux points de vue, et vous pourrez vous faire votre propre opinion au cours de votre lecture, mais pour la section qui nous occupe, mettez votre scepticisme de côté et jetons un coup d'œil approfondi à ce qui se trouve de l'autre côté, sur le côté sympa de la poutre — et essayons d'intégrer le fait que les choses que vous allez lire _pourraient vraiment arriver_. Si vous aviez montré à un chasseur-cueilleur notre monde de confort domestique, de technologie et d'abondance infinie, cela lui aurait semblé de la magie, ou une fiction — nous devons être assez humbles pour admettre qu'une transformation tout aussi inconcevable _pourrait_ être au programme dans le futur.
 
-Nick Bostrom décrit trois manières dont un système d'IA superintelligent pourrait fonctionner {(6)} :
+Nick Bostrom décrit trois manières dont un système d'IA superintelligent pourrait fonctionner :{(6)}
 
 - Comme un **oracle**, qui répond avec précision à presque toutes les questions qui lui sont posées, y compris des questions complexes que les humains ne peuvent pas facilement résoudre — par exemple, _Comment puis-je fabriquer un moteur de voiture plus efficace?_ Google est une sorte d'oracle primitif.
 - Comme un **génie**, qui exécute tout commandement complexe qu'on lui donne — _Utilise un assembleur moléculaire pour construire un nouveau type de moteur de voiture plus efficace_ — puis attend le prochain ordre.
@@ -192,13 +192,17 @@ Pour un système superintelligent, ces questions et tâches, qui nous semblent c
 
 [Eliezer Yudkowsky](http://www.yudkowsky.net/), un résident de l'Avenue des Anxieux dans notre graphique ci-dessus, l'a bien dit :
 
-> Il n'y a pas véritablement de problèmes difficiles, il n'y a que des problèmes difficiles à résoudre pour un certain niveau d'intelligence. Avec un accroissement minime [en niveau d'intelligence], la résolution de certains problèmes passera soudain d'"impossible" à "évidente". Avec un accroissement substantiel, ils deviendront tous évidents. {(7)}
+::graybox-start::
+
+Il n'y a pas véritablement de problèmes difficiles, il n'y a que des problèmes difficiles à résoudre pour un certain niveau d'intelligence. Avec un accroissement minime [en niveau d'intelligence], la résolution de certains problèmes passera soudain d'"impossible" à "évidente". Avec un accroissement substantiel, ils deviendront tous évidents. {(7)}
+
+::colorbox-end::
 
 Il y a beaucoup de scientifiques, d'inventeurs et d'entrepreneurs enthousiastes dans le Coin des Confiants — mais pour un tour d'horizon des aspects les plus brillants de l'horizon de l'IA, il n'y a qu'une seule personne qui puisse nous servir de guide.
 
-Ray Kurzweil est un homme clivant. Dans mes lectures, j'ai tout entendu, depuis une adoration confinant à la vénération de sa personne et de ses idées jusqu'au mépris exaspéré. Il y en a d'autres qui se situent quelque part entre les deux sentiments — l'auteur Douglas Hofstadter, en discutant des idées qu'on trouve dans les livres de Kurzweil, a élégamment déclaré que "c'est comme si vous preniez beaucoup d'excellente nourriture et quelques crottes de chien et que vous les mélangiez jusqu'à ce qu'on ne puisse plus distinguer ce qui est bon de ce qui est mauvais" {(8)}.
+Ray Kurzweil est un homme clivant. Dans mes lectures, j'ai tout entendu, depuis une adoration confinant à la vénération de sa personne et de ses idées jusqu'au mépris exaspéré. Il y en a d'autres qui se situent quelque part entre les deux sentiments — l'auteur Douglas Hofstadter, en discutant des idées qu'on trouve dans les livres de Kurzweil, a élégamment déclaré que "c'est comme si vous preniez beaucoup d'excellente nourriture et quelques crottes de chien et que vous les mélangiez jusqu'à ce qu'on ne puisse plus distinguer ce qui est bon de ce qui est mauvais".{(8)}
 
-Qu'on aime ou pas ses idées, tout le monde s'accorde à dire que Kurzweil est impressionnant. Il a commencé à inventer des choses dès son adolescence et dans les décennies qui suivirent, il a développé plusieurs inventions révolutionnaires, dont le premier scanner à plat, le premier scanner convertissant du texte en parole (permettant aux aveugles de lire des textes standard), le célèbre synthétiseur musical Kurzweil (le premier vrai piano électrique), et le premier système de reconnaissance vocale à large vocabulaire mis sur le marché. Il est l'auteur de cinq best-sellers nationaux. Il est bien connu pour ses prédictions audacieuses et les faits lui donnent [assez souvent raison](http://bigthink.com/endless-innovation/why-ray-kurzweils-predictions-are-right-86-of-the-time) — y compris lorsqu'à la fin des années 80, à une époque où Internet était une chose obscure, il a prédit qu'au début des années 2000, il deviendrait un phénomène mondial. Kurzweil a été qualifié de "génie qui a la bougeotte" par The Wall Street Journal, de "suprême machine à penser" par Forbes, "de véritable héritier d'Edison" par Inc. Magazine, et Bill Gates a dit de lui: "C'est la meilleure personne que je connaisse pour prédire l'avenir de l'intelligence artificielle". En 2012, le cofondateur de Google, Larry Page, a approché Kurzweil et lui a demandé d'être le directeur de l'ingénierie de Google((5)). En 2011, il a cofondé [l'Université de la Singularité](https://su.org/), hébergée par la NASA et partiellement sponsorisée par Google. Pas mal pour un seul homme.
+Qu'on aime ou pas ses idées, tout le monde s'accorde à dire que Kurzweil est impressionnant. Il a commencé à inventer des choses dès son adolescence et dans les décennies qui suivirent, il a développé plusieurs inventions révolutionnaires, dont le premier scanner à plat, le premier scanner convertissant du texte en parole (permettant aux aveugles de lire des textes standard), le célèbre synthétiseur musical Kurzweil (le premier vrai piano électrique), et le premier système de reconnaissance vocale à large vocabulaire mis sur le marché. Il est l'auteur de cinq best-sellers nationaux. Il est bien connu pour ses prédictions audacieuses et les faits lui donnent [assez souvent raison](http://bigthink.com/endless-innovation/why-ray-kurzweils-predictions-are-right-86-of-the-time) — y compris lorsqu'à la fin des années 80, à une époque où Internet était une chose obscure, il a prédit qu'au début des années 2000, il deviendrait un phénomène mondial. Kurzweil a été qualifié de "génie qui a la bougeotte" par The Wall Street Journal, de "suprême machine à penser" par Forbes, "de véritable héritier d'Edison" par Inc. Magazine, et Bill Gates a dit de lui: "C'est la meilleure personne que je connaisse pour prédire l'avenir de l'intelligence artificielle".{(9)} En 2012, le cofondateur de Google, Larry Page, a approché Kurzweil et lui a demandé d'être le directeur de l'ingénierie de Google((5)). En 2011, il a cofondé [l'Université de la Singularité](https://su.org/), hébergée par la NASA et partiellement sponsorisée par Google. Pas mal pour un seul homme.
 
 Ces éléments biographiques sont importants. Quand Kurzweil expose sa vision de l'avenir, il a parfaitement l'air d'être un fêlé, et le plus fou dans l'histoire, c'est qu'il ne l'est pas — c'est un homme extrêmement intelligent, cultivé, utile au monde. Vous pouvez penser qu'il a tort sur l'avenir, mais ce n'est pas un idiot. Savoir que c'est un gars très crédible me rend _heureux_, car en consultant ses prédictions sur l'avenir, j'ai _très, très_ envie qu'il ait raison. Et vous aussi. En entendant les prédictions de Kurzweil, partagées par d'autres penseurs du Coin des Confiants comme [Peter Diamandis](http://www.diamandis.com/) et [Ben Goertzel](https://en.wikipedia.org/wiki/Ben_Goertzel), il n'est pas difficile de comprendre pourquoi il a un grand nombre de fidèles qui sont si passionnés — connus sous le nom de singularistes. Selon lui, voici ce qui va se passer :
 
@@ -544,7 +548,7 @@ Notre volition extrapolée cohérente est notre désir, si nous en savions davan
 
 Suis-je enthousiaste à l'idée que le sort de l'humanité repose sur un ordinateur interprétant et appliquant cette déclaration poétique de manière prévisible et sans surprise ? Clairement pas. Mais je pense qu'avec suffisamment de réflexion et d'anticipation de la part de personnes intelligentes, nous pourrions trouver un moyen de créer une ASI Amicale.
 
-Et cela se passerait très bien si les seules personnes travaillant à la création d'une ASI étaient des penseurs brillants, prudents et visionnaires. Mais il existe toutes sortes de gouvernements, d'entreprises, d'armées, de laboratoires scientifiques et organisations du marché noir qui travaillent sur toutes sortes d'IA. Beaucoup d'entre eux essaient de construire des IA capables de s'auto-améliorer, et à un moment donné, quelqu'un fera une percée sur le type de système adéquat, et nous aurons une ASI sur cette planète. Les experts placent ce moment, en moyenne, autour de 2060 ; Ray Kurzweil le situe en 2045 ; Nick Bostrom pense que cela pourrait arriver à tout moment entre 2025 et la fin du siècle. Mais il croit que lorsque cela se produira, nous serons pris au dépourvu par un décollage rapide. Voilà comment il décrit notre situation {(21)}:
+Et cela se passerait très bien si les seules personnes travaillant à la création d'une ASI étaient des penseurs brillants, prudents et visionnaires. Mais il existe toutes sortes de gouvernements, d'entreprises, d'armées, de laboratoires scientifiques et organisations du marché noir qui travaillent sur toutes sortes d'IA. Beaucoup d'entre eux essaient de construire des IA capables de s'auto-améliorer, et à un moment donné, quelqu'un fera une percée sur le type de système adéquat, et nous aurons une ASI sur cette planète. Les experts placent ce moment, en moyenne, autour de 2060 ; Ray Kurzweil le situe en 2045 ; Nick Bostrom pense que cela pourrait arriver à tout moment entre 2025 et la fin du siècle. Mais il croit que lorsque cela se produira, nous serons pris au dépourvu par un décollage rapide. Voilà comment il décrit notre situation :{(21)}
 
 ::graybox-start::
 
@@ -554,13 +558,9 @@ _Face à la perspective d'une explosion d'intelligence, nous, les humains, somme
 
 Génial. Et nous ne pouvons pas simplement éloigner tous les enfants de la bombe — il y a trop d'entités, grandes et petites, qui travaillent dessus. En outre, il existe nombreuses techniques pour créer des systèmes IA innovants qui nécessitent peu de capital, ce qui permet leur développement dans les recoins et les coins sombres de la société, loin de toute surveillance. Il est également impossible de mesurer ce qui se passe, car beaucoup des parties impliquées — gouvernements désireux de rester discrets, organisations criminelles ou terroristes, entreprises technologiques furtives comme la fictive Robotica — voudront garder leurs avancées secrètes pour ne pas donner un avantage à leurs concurrents.
 
-<!--
+Ce qui est particulièrement inquiétant dans cette diversité d'entités travaillant sur l'IA, c'est qu'elles semblent fonctionner à plein régime. En développant des systèmes d'IA étroites de plus en plus intelligents, elles veulent devancer leurs concurrents. Les plus ambitieuses accélèrent encore plus, obsédées par les rêves de richesse, de récompenses, de pouvoir et de renommée qu'elles obtiendront nécessairement si elles atteignent les premières l'AGI.((20)) Et quand on sprinte à toute allure, il reste peu de temps pour réfléchir aux dangers. Au contraire, elles programment probablement leurs systèmes initiaux avec un objectif très simple et minimaliste—comme écrire une note sur papier avec un stylo—pour simplement "faire tourner l'IA". Plus tard, elles pensent qu'elles pourront toujours revenir en arrière et réviser cet objectif pour prendre en compte la sécurité. Vraiment… ?
 
-Ce qui est particulièrement inquiétant dans cette diversité d'entités travaillant sur l'IA, c'est qu'elles semblent fonctionner à plein régime. En développant des systèmes d'IA étroites de plus en plus intelligents, elles veulent devancer leurs concurrents. Les plus ambitieuses accélèrent encore plus, obsédées par les rêves de richesse, de récompenses, de pouvoir et de renommée qu'elles obtiendront nécessairement si elles atteignent les premières l'AGI.((20)) Et quand on sprinte à toute allure, il reste peu de temps pour réfléchir aux dangers.
-
-Au contraire, elles programment probablement leurs systèmes initiaux avec un objectif très simple et minimaliste—comme écrire une note sur papier avec un stylo—pour simplement "faire tourner l'IA". Plus tard, elles pensent qu'elles pourront toujours revenir en arrière et réviser cet objectif pour prendre en compte la sécurité. Vraiment… ?
-
-Bostrom et beaucoup d'autres pensent également que le scénario le plus probable est que le tout premier ordinateur à atteindre l'ASI comprendra immédiatement le bénéfice stratégique d'être le seul système ASI au monde. Et en cas de décollage rapide, s'il atteignait l'ASI ne serait-ce que quelques jours avant le second, il serait suffisamment en avance pour supprimer efficacement et de façon permanente tous les concurrents. Bostrom appelle cela un avantage stratégique décisif, ce qui permettrait à la première ASI de devenir un singleton—une ASI capable de régner sur le monde à sa guise pour toujours, que son souhait soit de nous conduire à l'immortalité, de nous effacer de l'existence, ou de transformer l'univers en une infinité de trombones.
+Bostrom et beaucoup d'autres pensent également que le scénario le plus probable est que le tout premier ordinateur à atteindre l'ASI comprendra immédiatement le bénéfice stratégique d'être le _seul_ système ASI au monde. Et en cas de décollage rapide, s'il atteignait l'ASI ne serait-ce que quelques _jours_ avant le second, il serait suffisamment en avance pour supprimer efficacement et de façon permanente tous les concurrents. Bostrom appelle cela un _avantage stratégique décisif_, ce qui permettrait à la première ASI de devenir un _singleton_ — une ASI capable de régner sur le monde à sa guise pour toujours, que son souhait soit de nous conduire à l'immortalité, de nous effacer de l'existence, ou de transformer l'univers en une infinité de [trombones](http://www.salon.com/2014/08/17/our_weird_robot_apocalypse_why_the_rise_of_the_machines_could_be_very_strange/).
 
 Le phénomène de singleton pourrait jouer en notre faveur ou entraîner notre destruction. Si les personnes qui réfléchissent le plus à la théorie de l'IA et à la sécurité humaine trouvent un moyen sûr de créer une ASI Amicale avant qu'une IA atteigne l'intelligence humaine, la première ASI pourrait s'avérer amicale.((21)) Elle pourrait alors utiliser son avantage stratégique décisif pour sécuriser un statut de singleton et surveiller facilement toute IA potentiellement hostile en développement. Nous serions entre de bonnes mains.
 
@@ -576,29 +576,31 @@ J'éprouve des sentiments étranges et contradictoires au moment où j'écris.
 
 D'un côté, en pensant à notre espèce, il semble que nous n'aurons qu'une seule et unique chance de bien faire les choses. La première ASI que nous créerons sera probablement aussi la dernière—et si on en juge par le niveau de bugs des versions 1.0 de la plupart des produits, c'est terrifiant. D'un autre côté, Nick Bostrom souligne un avantage majeur de notre côté : c'est nous qui avons le premier coup à jouer ici. Il est en notre pouvoir de jouer ce coup avec suffisamment de prudence et de prévoyance pour nous donner une grande chance de succès. Et quels sont les enjeux ?
 
-part2_20_spectrum1.![Description](/wbw/jpg)
+![Description](/wbw/part2_20_spectrum1.jpg)
 
-Si l'ASI devient réalité au cours de ce siècle, et si les conséquences de ce phénomène sont aussi extrêmes—et permanentes—que la plupart des experts le pensent, nous avons une responsabilité énorme sur les épaules. Les millions d'années de vies humaines à venir nous observent silencieusement, espérant de toutes leurs forces que nous ne nous trompions pas. Nous avons la possibilité d'être les humains qui ont donné à tous les futurs humains le cadeau de la vie, et peut-être même celui d'une vie éternelle et sans douleur. Ou nous serons les responsables de l'échec—ceux qui auront permis à cette espèce incroyablement particulière, avec sa musique et son art, sa curiosité et ses rires, ses innombrables découvertes et inventions, de connaître sans cérémonie une bien triste fin.
+Si l'ASI devient réalité au cours de ce siècle, et si les conséquences de ce phénomène sont aussi extrêmes—et permanentes—que la plupart des experts le pensent, nous avons une responsabilité _énorme_ sur les épaules. Les millions d'années de vies humaines à venir nous observent silencieusement, espérant de toutes leurs forces que nous ne nous trompions pas. Nous avons la possibilité d'être les humains qui ont donné à tous les futurs humains le cadeau de la vie, et peut-être même celui d'une vie éternelle et sans douleur. Ou nous serons les responsables de l'échec—ceux qui auront permis à cette espèce incroyablement particulière, avec sa musique et son art, sa curiosité et ses rires, ses innombrables découvertes et inventions, de connaître sans cérémonie une bien triste fin.
 
-Quand je réfléchis à tout cela, la seule chose que je veux, c'est que nous prenions notre temps et que nous soyons incroyablement prudents en matière d'IA. Rien en ce monde n'a autant d'importance que le fait de réussir ce défi — quel que soit le temps que cela nous prendra.
+Quand je réfléchis à tout cela, la seule chose que je veux, c'est que nous prenions notre _temps_ et que nous soyons _incroyablement prudents_ en matière d'IA. Rien en ce monde n'a autant d'importance que le fait de réussir ce défi — quel que soit le temps que cela nous prendra.
 
 Et puis ensuite…
-Je pense au fait de ne pas mourir.
-Ne. Pas. Mourir.
 
-Et tout commence à ressembler à ce schéma :
+Je pense au fait de _ne pas mourir_.
+
+_Ne. Pas. Mourir._
+
+Et le schéma commence à ressembler à ça :
 
 ![Description](/wbw/part2_21_spectrum2.png)
 
-Et du coup je me dis que la musique et l'art qu'a produit l'humanité, c'est bien, mais pas si bien que ça, et qu'il y en a une sacrée quantité qui est simplement pourrie. Et qu'il y a beaucoup de gens dont je trouve les rires agaçants, et que ces millions de personnes de l'avenir n'espèrent rien du tout parce qu'elles n'existent pas. Et peut-être qu'on n'a pas besoin d'être exagérément prudents, parce que franchement, ça fait rêver qui ?
+Et du coup je me dis que la musique et l'art qu'a produit l'humanité, c'est bien, mais pas _si_ bien que ça, et qu'il y en a une sacrée quantité qui est simplement pourrie. Et qu'il y a beaucoup de gens dont je trouve les rires agaçants, et que ces millions de personnes de l'avenir n'espèrent rien du tout parce qu'elles n'existent pas. Et peut-être qu'on n'a pas besoin d'être _exagérément_ prudents, parce que franchement, ça fait rêver qui ?
 
-Parce que ça me ferait quand même méchamment mal si les humains trouvaient comment vaincre la mort juste après ma mort.
+Parce que ça me ferait quand même _méchamment mal_ si les humains trouvaient comment vaincre la mort _juste après ma mort_.
 
 Au cours du mois qui vient de s'écouler, j'ai passé mon temps à naviguer sans arrêt entre ces deux positions.
 
-Mais quel que soit votre camp, c'est une question à laquelle on devrait tous réfléchir, dont on devrait parler, et à laquelle on devrait consacrer plus d'efforts que ce qu'on fait actuellement.
+Mais quel que soit votre camp, _c'est une question à laquelle on devrait tous réfléchir, dont on devrait parler, et à laquelle on devrait consacrer plus d'efforts que ce qu'on fait actuellement_.
 
-Ça me rappelle Game of Thrones, quand les gens disaient : "On est super occupés à se battre entre nous, mais ce qu'on devrait vraiment combattre c'est ce qui arrive depuis le nord du Mur." On est là, en équilibre sur notre poutre, à se chamailler sur tous les sujets de poutre possibles et à stresser sur tous ces problèmes de poutre, alors qu'il y a de fortes chances qu'on se fasse balayer de la poutre.
+Ça me rappelle Game of Thrones, quand les gens disaient : "On est super occupés à se battre entre nous, mais ce qu'on devrait vraiment combattre c'est ce qui arrive depuis le _nord du Mur_." On est là, en équilibre sur notre poutre, à se chamailler sur tous les sujets de poutre possibles et à stresser sur tous ces problèmes de poutre, _alors qu'il y a de fortes chances qu'on se fasse balayer de la poutre_.
 
 Et quand ça arrivera, plus aucun problème de poutre n'aura d'importance. Selon le côté où on tombera, soit les problèmes seront tous facilement résolus, soit on n'aura plus de problèmes parce que les morts n'ont pas de problèmes.
 
@@ -606,9 +608,7 @@ C'est pour cela que ceux qui comprennent l'intelligence artificielle superintell
 
 Alors, parlons-en.
 
-———-
-
- -->
+———
 
 (1):Si vous ne comprenez pas le système des notes, il y en a de deux types différents. Les cercles bleus sont ceux qui sont marrants / intéressants et que je vous conseille de lire. Ce sont des informations supplémentaires ou des pensées que je n'ai pas voulu mettre dans le texte principal, soit parce que ce sont des réflexions marginales, soit parce que je veux dire quelque chose d'un peu trop bizarre pour être simplement intégré dans le texte normal.
 
@@ -656,23 +656,23 @@ NdT : le lien ne fonctionne plus (site fermé) et impossible de retrouver le GIF
 
 (21): Elon Musk a donné un gros boost aux efforts sur la sûreté il y a quelques semaines en [donnant](https://futureoflife.org/fli-projects/elon-musk-donates-10m-to-our-research-program/) 10 millions de $ à [The Future of Life Institute](https://futureoflife.org/), une organisation dédiée à garder l'IA bénéfique, déclarant que “nos systèmes IA doivent faire ce qu'on veut qu'ils fassent”.
 
-{1}: TODO
+{1}: Les carrés gris sont des objets ennuyeux et si vous cliquer sur un carré gris ça va vous barber. C’est uniquement pour les sources et les citations.
 
-{2}: TODO
+{2}: http://www.nickbostrom.com/papers/survey.pdf, 10.
 
-{3}: TODO
+{3}: Barrat, [Our Final Invention](https://www.amazon.com/gp/product/B00CQYAWRY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00CQYAWRY&linkCode=as2&tag=wabuwh00-20&linkId=3SF7IUFSRCKH7C4J), 152.
 
-{4}: TODO
+{4}: http://www.nickbostrom.com/papers/survey.pdf, 12.
 
-{5}: TODO
+{5}: Barrat, [Our Final Invention](https://www.amazon.com/gp/product/B00CQYAWRY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00CQYAWRY&linkCode=as2&tag=wabuwh00-20&linkId=3SF7IUFSRCKH7C4J), 25.
 
-{6}: TODO
+{6}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), Chapter 10
 
-{7}: TODO
+{7}: Yudkowsky, Staring into the Singularity.
 
-{8}: TODO
+{8}: [Extrait de l'entretien avec Hofstadter](https://3quarksdaily.com/3quarksdaily/2007/03/greg_ross_inter.html)
 
-{9}: TODO
+{9}: [WSJ](http://www.stanfordlawreview.org/online/privacy-and-big-data/prediction-preemption-presumption), [Forbes](https://www.forbes.com/asap/1998/0406/017.html), [Inc](https://www.inc.com/magazine/20050401/26-index.html), [Gates](https://www.theguardian.com/technology/2014/feb/22/robots-google-ray-kurzweil-terminator-singularity-artificial-intelligence).
 
 {10}: Kurzweil, [The Singularity is Near](https://www.amazon.com/gp/product/0143037889/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0143037889&linkCode=as2&tag=wabuwh00-20&linkId=54Q62R5PYJBEENTP), 535.
 
