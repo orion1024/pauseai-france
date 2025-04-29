@@ -684,18 +684,18 @@ NdT : le lien ne fonctionne plus (site fermé) et impossible de retrouver le GIF
 
 {14}: Louis Helm, [Will Advanced AI Be Our Final Invention?](https://singularityhub.com/2013/12/14/will-advanced-ai-be-our-final-invention/)
 
-{15}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), loc. 25.
+{15}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), 25.
 
 {16}: Barrat, [Our Final Invention](https://www.amazon.com/gp/product/B00CQYAWRY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00CQYAWRY&linkCode=as2&tag=wabuwh00-20&linkId=3SF7IUFSRCKH7C4J), 51.
 
-{17}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), loc. 2250.
+{17}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), 2250.
 
-{18}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), loc. 2301.
+{18}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), 2301.
 
-{19}: This is based on an example from Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), loc. 2819.
+{19}: This is based on an example from Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), 2819.
 
 {20}: Yudkowsky, [Coherent Extrapolated Volition](https://intelligence.org/files/CEV.pdf).
 
-{21}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), loc. 6026.
+{21}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), 6026.
 
 &nbsp

@@ -296,7 +296,7 @@ C'est le sujet de [la partie 2](/waitbutwhy2) de ce post.
 
 {5}: Kurzweil, The Singularity is Near](https://www.amazon.com/gp/product/0143037889/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0143037889&linkCode=as2&tag=wabuwh00-20&linkId=54Q62R5PYJBEENTP), 392
 
-{6}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), loc. 597
+{6}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), 597
 
 {7}: Nilsson, [The Quest for Artificial Intelligence: A History of Ideas and Achievements](https://www.amazon.com/gp/product/0521122937/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0521122937&linkCode=as2&tag=wabuwh00-20&linkId=QIJQME4U3J2KZRRY), 318.
 
@@ -304,6 +304,6 @@ C'est le sujet de [la partie 2](/waitbutwhy2) de ce post.
 
 {9}: Kurzweil, The Singularity is Near](https://www.amazon.com/gp/product/0143037889/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0143037889&linkCode=as2&tag=wabuwh00-20&linkId=54Q62R5PYJBEENTP), 118
 
-{10}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), loc. 1500-1576
+{10}: Bostrom, [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0199678111/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199678111&linkCode=as2&tag=wabuwh00-20&linkId=LBOTX2G2R72P5EUA), 1500-1576
 
 &nbsp
