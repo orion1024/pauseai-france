@@ -45,7 +45,7 @@ Imaginez que vous preniez une machine à voyager dans le temps et que vous retou
 
 Cette expérience pour lui ne serait ni surprenante, ni choquante, ni même renversante — ces mots ne sont pas assez forts. Il pourrait littéralement en mourir.
 
-Mais voici ce qui est intéressant : Imaginant que ce type retourne lui-même en 1750, et piqué au vif par le fait que nous avons pu observer sa réaction, il décide de tenter l'expérience aussi. Il monterait dans la machine à voyager dans le temps et, reculant de la même distance, il capturerait quelqu'un vivant en l'an 1500, l'amènerait en 1750 et lui montrerait tout. Le type de 1500 serait choqué par beaucoup de choses — mais il n'en mourrait pas. Ce serait _beaucoup_ moins dingue à vivre pour lui, car bien que 1500 et 1750 soient des époques très différentes, elles étaient _bien moins_ différentes que 1750 et 2015.
+Mais voici ce qui est intéressant : imaginons que ce type retourne lui-même en 1750, et piqué au vif par le fait que nous avons pu observer sa réaction, il décide de tenter l'expérience aussi. Il monterait dans la machine à voyager dans le temps et, reculant de la même distance, il capturerait quelqu'un vivant en l'an 1500, l'amènerait en 1750 et lui montrerait tout. Le type de 1500 serait choqué par beaucoup de choses — mais il n'en mourrait pas. Ce serait _beaucoup_ moins dingue à vivre pour lui, car bien que 1500 et 1750 soient des époques très différentes, elles étaient _bien moins_ différentes que 1750 et 2015.
 
 Le type de 1500 apprendrait des dingueries sur l'espace et la physique, il serait impressionné par la persistance de l'Europe à s'engager dans la voie de l'impérialisme qui n'était qu'une lubie à son époque, et il devrait revoir sérieusement sa version de la carte du monde. Mais l'observation de la vie quotidienne en 1750 — les transports, les communications, etc. — ne le tuerait certainement pas.
 
@@ -301,7 +301,7 @@ C'est le sujet de [la partie 2](/waitbutwhy2) de ce post.
 
 (3): Beaucoup plus sur ce que ça signifie pour un ordinateur de “vouloir” quelque chose dans la partie 2
 
-{1}: Les carrés gris sont des objets ennuyeux et si vous cliquer sur un carré gris ça va vous barber. C’est uniquement pour les sources et les citations.
+{1}: Les carrés gris sont des objets ennuyeux et si vous cliquez sur un carré gris ça va vous barber. C’est uniquement pour les sources et les citations.
 
 {2}: Kurzweil, [The Singularity is Near](https://www.amazon.com/gp/product/0143037889/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0143037889&linkCode=as2&tag=wabuwh00-20&linkId=54Q62R5PYJBEENTP), 39.
 

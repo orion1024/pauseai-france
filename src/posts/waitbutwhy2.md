@@ -663,7 +663,7 @@ NdT : le lien ne fonctionne plus (site fermé) et impossible de retrouver le GIF
 
 (21): Elon Musk a donné un gros boost aux efforts sur la sûreté il y a quelques semaines en [donnant](https://futureoflife.org/fli-projects/elon-musk-donates-10m-to-our-research-program/) 10 millions de $ à [The Future of Life Institute](https://futureoflife.org/), une organisation dédiée à garder l'IA bénéfique, déclarant que “nos systèmes IA doivent faire ce qu'on veut qu'ils fassent”.
 
-{1}: Les carrés gris sont des objets ennuyeux et si vous cliquer sur un carré gris ça va vous barber. C’est uniquement pour les sources et les citations.
+{1}: Les carrés gris sont des objets ennuyeux et si vous cliquez sur un carré gris ça va vous barber. C’est uniquement pour les sources et les citations.
 
 {2}: http://www.nickbostrom.com/papers/survey.pdf, 10.
 
